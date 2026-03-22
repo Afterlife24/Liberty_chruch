@@ -124,7 +124,7 @@ export function NationsSection() {
                 transition={{
                   delay: 0.4 + index * 0.15,
                   duration: 0.7,
-                  ease: "easeOut"
+                  ease: [0.25, 0.46, 0.45, 0.94]
                 }}
                 whileHover={{
                   y: -12,
@@ -197,7 +197,7 @@ export function NationsSection() {
               size="lg"
               className="bg-gold hover:bg-gold-dark text-charcoal font-medium rounded-full group shadow-lg hover:shadow-gold/25 transition-shadow duration-300"
             >
-              <Link to="/global-adventure">
+              <Link href="/global-adventure">
                 Get Involved
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
               </Link>

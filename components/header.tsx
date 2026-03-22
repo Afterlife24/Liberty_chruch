@@ -5,7 +5,6 @@ import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const navLinks = [
-  { href: "/", label: "Home" },
   { href: "#plan-visit", label: "Plan Your Visit" },
   { href: "#discover", label: "Discover Liberty" },
   { href: "/global-adventure", label: "Global Adventure" },
@@ -38,12 +37,11 @@ export function Header() {
           }`}
       >
         <div className="container mx-auto px-4">
-          <div className={`flex items-center justify-between transition-all duration-300 ${isScrolled ? "h-16" : "h-20"
-            }`}>
+          <div className="flex items-center justify-between h-20">
             <Link to="/" className="flex items-center gap-3">
               <motion.div
                 whileHover={{ scale: 1.05 }}
-                className={`font-serif font-bold tracking-tight transition-all duration-300 ${isScrolled ? "text-xl text-charcoal" : "text-2xl text-warm-white"
+                className={`text-2xl font-serif font-bold tracking-tight ${isScrolled ? "text-charcoal" : "text-warm-white"
                   }`}
               >
                 Liberty Church

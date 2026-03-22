@@ -141,7 +141,7 @@ export function NewHereSection() {
                   transition={{
                     delay: 0.6 + index * 0.1,
                     duration: 0.5,
-                    ease: [0.25, 0.46, 0.45, 0.94]
+                    ease: "easeOut"
                   }}
                   whileHover={{ x: 8 }}
                   className="flex items-start gap-3 group cursor-default"

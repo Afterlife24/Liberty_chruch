@@ -72,10 +72,6 @@ export function DiscoverSection() {
       opacity: 1,
       y: 0,
       scale: 1,
-      transition: {
-        duration: 0.7,
-        ease: [0.25, 0.46, 0.45, 0.94] // Custom easing for smooth feel
-      },
     },
   }
 
@@ -143,7 +139,7 @@ export function DiscoverSection() {
               }}
               className="group"
             >
-              <Link href={category.href}>
+              <a href={category.href}>
                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg group-hover:shadow-2xl transition-shadow duration-500">
                   {/* Image with zoom effect */}
                   <motion.div
@@ -191,7 +187,7 @@ export function DiscoverSection() {
                     <div className="absolute bottom-0 left-0 right-0 h-1 bg-gold" />
                   </motion.div>
                 </div>
-              </Link>
+              </a>
             </motion.div>
           ))}
         </motion.div>

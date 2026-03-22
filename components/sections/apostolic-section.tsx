@@ -47,7 +47,7 @@ const values = [
 export function ApostolicSection() {
   const ref = useRef<HTMLDivElement>(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
-  
+
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "end start"],
@@ -56,7 +56,7 @@ export function ApostolicSection() {
   // Parallax for content
   const leftContentY = useTransform(scrollYProgress, [0, 1], [60, -60])
   const leftContentYSpring = useSpring(leftContentY, { stiffness: 100, damping: 30 })
-  
+
   const rightContentY = useTransform(scrollYProgress, [0, 1], [80, -40])
   const rightContentYSpring = useSpring(rightContentY, { stiffness: 100, damping: 30 })
 
@@ -77,9 +77,9 @@ export function ApostolicSection() {
       opacity: 1,
       y: 0,
       scale: 1,
-      transition: { 
-        duration: 0.6, 
-        ease: [0.25, 0.46, 0.45, 0.94]
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
       },
     },
   }
@@ -88,11 +88,11 @@ export function ApostolicSection() {
     <section ref={ref} className="py-24 md:py-32 bg-charcoal text-warm-white overflow-hidden relative">
       {/* Floating Elements */}
       <FloatingElements variant="dark" count={6} />
-      
+
       {/* Glowing Orbs */}
       <GlowOrb className="top-20 left-10" color="gold" size="lg" />
       <GlowOrb className="bottom-20 right-20" color="warm" size="md" />
-      
+
       {/* Animated grid pattern */}
       <div className="absolute inset-0 pointer-events-none opacity-5">
         <div className="absolute inset-0" style={{
@@ -111,7 +111,7 @@ export function ApostolicSection() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 1, ease: "easeOut" }}
           >
-            <motion.span 
+            <motion.span
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.2, duration: 0.6 }}
@@ -119,7 +119,7 @@ export function ApostolicSection() {
             >
               Our Identity
             </motion.span>
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.3, duration: 0.8 }}
@@ -127,7 +127,7 @@ export function ApostolicSection() {
             >
               An Apostolic Movement
             </motion.h2>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.4, duration: 0.6 }}
@@ -137,7 +137,7 @@ export function ApostolicSection() {
               a movement committed to establishing God's Kingdom in every sphere
               of society.
             </motion.p>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.5, duration: 0.6 }}
@@ -169,7 +169,7 @@ export function ApostolicSection() {
               <motion.div
                 key={value.title}
                 variants={itemVariants}
-                whileHover={{ 
+                whileHover={{
                   scale: 1.05,
                   transition: { type: "spring", stiffness: 300, damping: 20 }
                 }}
@@ -179,9 +179,9 @@ export function ApostolicSection() {
                 <motion.div
                   className="absolute inset-0 bg-gradient-to-br from-gold/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                 />
-                
+
                 <div className="relative z-10">
-                  <motion.div 
+                  <motion.div
                     className="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center mb-4 group-hover:bg-gold/30 transition-colors duration-300"
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.6 }}

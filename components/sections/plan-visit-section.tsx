@@ -52,7 +52,7 @@ const expectations = [
 export function PlanVisitSection() {
   const ref = useRef<HTMLDivElement>(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
-  
+
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "end start"],
@@ -78,9 +78,9 @@ export function PlanVisitSection() {
       opacity: 1,
       y: 0,
       scale: 1,
-      transition: { 
-        duration: 0.7, 
-        ease: [0.25, 0.46, 0.45, 0.94]
+      transition: {
+        duration: 0.7,
+        ease: "easeOut"
       },
     },
   }
@@ -103,7 +103,7 @@ export function PlanVisitSection() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-center mb-16"
         >
-          <motion.span 
+          <motion.span
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.1, duration: 0.6 }}
@@ -111,7 +111,7 @@ export function PlanVisitSection() {
           >
             Visit Us
           </motion.span>
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.2, duration: 0.6 }}
@@ -119,7 +119,7 @@ export function PlanVisitSection() {
           >
             Plan Your Visit
           </motion.h2>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.3, duration: 0.6 }}
@@ -139,10 +139,10 @@ export function PlanVisitSection() {
           className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16"
         >
           {locations.map((location, index) => (
-            <motion.div 
-              key={location.name} 
+            <motion.div
+              key={location.name}
               variants={itemVariants}
-              whileHover={{ 
+              whileHover={{
                 y: -8,
                 transition: { type: "spring", stiffness: 300, damping: 20 }
               }}
@@ -152,7 +152,7 @@ export function PlanVisitSection() {
                 <motion.div
                   className="absolute inset-0 bg-gradient-to-br from-gold/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                 />
-                
+
                 <CardContent className="p-8 relative z-10">
                   <div className="flex items-start justify-between mb-6">
                     <div>
@@ -215,7 +215,7 @@ export function PlanVisitSection() {
             <motion.div
               key={item.title}
               variants={itemVariants}
-              whileHover={{ 
+              whileHover={{
                 y: -8,
                 transition: { type: "spring", stiffness: 300, damping: 20 }
               }}
@@ -225,9 +225,9 @@ export function PlanVisitSection() {
                 <motion.div
                   className="absolute inset-0 bg-gradient-to-t from-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                 />
-                
+
                 <CardContent className="p-6 text-center relative z-10">
-                  <motion.div 
+                  <motion.div
                     className="w-14 h-14 rounded-full bg-gold/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-gold/20 transition-colors duration-300"
                     whileHover={{ rotate: 10, scale: 1.1 }}
                     transition={{ type: "spring", stiffness: 300 }}

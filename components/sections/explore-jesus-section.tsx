@@ -156,7 +156,7 @@ export function ExploreJesusSection() {
                 size="lg"
                 className="bg-gold hover:bg-gold-dark text-charcoal font-medium rounded-full group shadow-lg hover:shadow-gold/25 transition-shadow duration-300"
               >
-                <Link href="/who-is-jesus">
+                <Link to="/who-is-jesus">
                   Learn More
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>

@@ -1,0 +1,60 @@
+=====================================================================
+          CHURCH WEBSITE - IMAGE DIMENSIONS REFERENCE
+=====================================================================
+
+Section                      | Aspect Ratio | Size (pixels)  | Format
+----------------------------------------------------------------------
+Hero (Top Banner)            | 16:9         | 1920 x 1080    | JPG/WebP
+Welcome                      | 4:3          | 400 x 300      | JPG/WebP
+Be A Part Of The Story       | 16:9         | 800 x 450      | JPG/WebP
+Growing Disciples            | 16:9         | 800 x 450      | JPG/WebP
+I'm New Here                 | 1:1          | 600 x 600      | JPG/WebP
+Events                       | 3:2          | 600 x 400      | JPG/WebP
+Internal Page Headers        | 16:9         | 1600 x 900     | JPG/WebP
+
+=====================================================================
+
+DETAILS:
+
+"Welcome" Section:
+- 1 small image with text overlay
+- Size: 400 x 300 pixels (4:3 ratio)
+- Text overlay: "REBUILD RESTORE RENEW"
+
+"Be A Part Of The Story" Section:
+- 6 tiles total (Netflix-style horizontal scroll)
+- Shows 3 tiles on desktop, 2 on tablet, 1 on mobile
+- Each tile: 800 x 450 pixels (16:9 ratio)
+
+"Growing Disciples" Section:
+- 6 tiles total (4 image tiles + 2 dark text-only tiles)
+- Shows 3 tiles on desktop, 2 on tablet, 1 on mobile
+- Image tiles: 800 x 450 pixels (16:9 ratio)
+- Dark tiles: No image needed (text only)
+
+"I'm New Here" Section:
+- 4 square cards in a grid
+- Each card: 600 x 600 pixels (1:1 ratio)
+
+Events Section:
+- 2 cards side by side
+- Left: Event card with background image (600 x 400 pixels, 3:2 ratio)
+- Right: "Stay Up To Date" card (solid color, no image needed)
+
+Internal Pages (e.g., "Exploring Faith"):
+- Page header image: 1600 x 900 pixels (16:9 ratio)
+
+=====================================================================
+
+FILE SIZE TARGETS:
+- Hero images: 200-500 KB
+- Scrolling tiles: 80-150 KB each
+- Event cards: 60-120 KB each
+- Internal page headers: 200-400 KB
+
+FORMAT NOTES:
+- Use JPG for photographs
+- Use WebP for better compression (with JPG fallback)
+- All images use center-focused cropping (object-fit: cover)
+
+=====================================================================

@@ -37,31 +37,31 @@ const subPages = [
         title: "Who is Jesus?",
         description: "Discover the heart of our faith and learn about Jesus Christ, His life, teachings, and what He means for you today.",
         link: "/im-new-here/who-is-jesus",
-        image: "https://images.pexels.com/photos/372326/pexels-photo-372326.jpeg?auto=compress&cs=tinysrgb&w=600"
+        image: "/images/I'm New Here/Liberty Website-I'm New Here-Who is Jesus_.jpg"
     },
     {
         title: "Planning Your Visit",
         description: "Everything you need to know for your first visit - what to expect, when we meet, and how to get here.",
         link: "/im-new-here/planning-your-visit",
-        image: "https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg?auto=compress&cs=tinysrgb&w=600"
+        image: "/images/I'm New Here/Liberty Website-I'm New Here-Plan Your Visit.jpg"
     },
     {
         title: "Our Vision and Values",
         description: "Learn about what drives us as a church family and the values that shape everything we do together.",
         link: "/im-new-here/vision-and-values",
-        image: "https://images.pexels.com/photos/3836097/pexels-photo-3836097.jpeg?auto=compress&cs=tinysrgb&w=600"
+        image: "/images/I'm New Here/Liberty Website-I'm New Here-Vision&Values.jpg"
     },
     {
         title: "What We Believe",
         description: "Explore the core beliefs and biblical foundations that guide our church and our relationship with God.",
         link: "/im-new-here/what-we-believe",
-        image: "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=600"
+        image: "/images/I'm New Here/Liberty Website-I'm New Here-What We Believe.jpg"
     },
     {
         title: "Global Picture",
         description: "See how we're part of something bigger - our mission to make a difference locally and around the world.",
         link: "/im-new-here/global-picture",
-        image: "https://images.pexels.com/photos/1619317/pexels-photo-1619317.jpeg?auto=compress&cs=tinysrgb&w=600"
+        image: "/images/I'm New Here/Liberty Website-I'm New Here-Global Picture.jpg"
     }
 ];
 
@@ -69,9 +69,9 @@ export default function ImNewHerePage() {
     return (
         <div className="min-h-screen bg-white">
             {/* Hero Section */}
-            <div className="relative h-[40vh] md:h-[50vh] overflow-hidden">
+            <div className="relative h-[550px] overflow-hidden">
                 <img
-                    src="https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                    src="/images/pages_banners_internal/Liberty Website-Internal Page Banner-Vision&Values.jpg"
                     alt="I'm New Here"
                     className="w-full h-full object-cover"
                 />

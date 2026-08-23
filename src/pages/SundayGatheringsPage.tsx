@@ -37,19 +37,19 @@ const subPages = [
         title: "Places of Liberty",
         description: "Discover all the locations where Liberty Church gathers to worship and build community together.",
         link: "/sunday-gatherings/places-of-liberty",
-        image: "https://images.pexels.com/photos/8363028/pexels-photo-8363028.jpeg?auto=compress&cs=tinysrgb&w=600"
+        image: "/images/sundaygathering/Liberty Website-Sunday Gatherings Section-Places of Liberty.jpg"
     },
     {
         title: "Newport",
         description: "Join us at our Newport location for Sunday worship at Gaer Park Drive. Find all the details about this vibrant community.",
         link: "/sunday-gatherings/newport",
-        image: "https://images.pexels.com/photos/1462630/pexels-photo-1462630.jpeg?auto=compress&cs=tinysrgb&w=600"
+        image: "/images/sundaygathering/Liberty Website-Sunday Gatherings Section-Liberty Newport.jpg"
     },
     {
         title: "Risca",
         description: "Worship with us at our Risca location at the Scouts Hall. Discover this welcoming community and what makes it special.",
         link: "/sunday-gatherings/risca",
-        image: "https://images.pexels.com/photos/7974/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600"
+        image: "/images/sundaygathering/Liberty Website-Sunday Gatherings Section-Liberty Risca.jpg"
     }
 ];
 
@@ -57,9 +57,9 @@ export default function SundayGatheringsPage() {
     return (
         <div className="min-h-screen bg-white">
             {/* Hero Section */}
-            <div className="relative h-[40vh] md:h-[50vh] overflow-hidden">
+            <div className="relative h-[550px] overflow-hidden">
                 <img
-                    src="https://images.pexels.com/photos/8363028/pexels-photo-8363028.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                    src="/images/sundaygathering/Liberty Website-Sunday Gatherings Section-Places of Liberty.jpg"
                     alt="Sunday Gatherings"
                     className="w-full h-full object-cover"
                 />

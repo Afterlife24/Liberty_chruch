@@ -37,19 +37,19 @@ const subPages = [
         title: "Listen Again",
         description: "Catch up on Sunday messages and teachings you may have missed. Access our library of audio sermons and talks.",
         link: "/media/listen-again",
-        image: "https://images.pexels.com/photos/4144923/pexels-photo-4144923.jpeg?auto=compress&cs=tinysrgb&w=600"
+        image: "/images/media/Liberty Website-Media Section-Listen Again.jpg"
     },
     {
         title: "Video Sessions",
         description: "Watch recorded services, special events, and teaching series. Experience our gatherings from anywhere.",
         link: "/media/video-sessions",
-        image: "https://images.pexels.com/photos/7534456/pexels-photo-7534456.jpeg?auto=compress&cs=tinysrgb&w=600"
+        image: "/images/media/Liberty Website-Media Section-Video Content.jpg"
     },
     {
         title: "More Resources",
         description: "Explore additional materials including study guides, reading resources, and supplementary content to grow your faith.",
         link: "/media/more-resources",
-        image: "https://images.pexels.com/photos/256559/pexels-photo-256559.jpeg?auto=compress&cs=tinysrgb&w=600"
+        image: "/images/media/Liberty Website-Media Section-Additional Resources.jpg"
     }
 ];
 
@@ -57,9 +57,9 @@ export default function MediaPage() {
     return (
         <div className="min-h-screen bg-white">
             {/* Hero Section */}
-            <div className="relative h-[40vh] md:h-[50vh] overflow-hidden">
+            <div className="relative h-[550px] overflow-hidden">
                 <img
-                    src="https://images.pexels.com/photos/4144923/pexels-photo-4144923.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                    src="/images/media/Liberty Website-Media Section-Listen Again.jpg"
                     alt="Media"
                     className="w-full h-full object-cover"
                 />

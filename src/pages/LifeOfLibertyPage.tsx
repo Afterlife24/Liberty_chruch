@@ -53,55 +53,55 @@ const subPages = [
         title: "Liberty Groups",
         description: "Connect with others through our small groups where you can build meaningful relationships and grow in faith together.",
         link: "/life-of-liberty/liberty-groups",
-        image: "https://images.pexels.com/photos/1181533/pexels-photo-1181533.jpeg?auto=compress&cs=tinysrgb&w=600"
+        image: "/images/life of liberty/Liberty Website-Growing Disciples Section-Liberty Groups.jpg"
     },
     {
         title: "Liberty Kids",
         description: "Fun, safe, and engaging programs designed specifically for children to learn about God's love in age-appropriate ways.",
         link: "/life-of-liberty/liberty-kids",
-        image: "https://images.pexels.com/photos/8613313/pexels-photo-8613313.jpeg?auto=compress&cs=tinysrgb&w=600"
+        image: "/images/life of liberty/Liberty Website-Growing Disciples Section-Liberty Kids.jpg"
     },
     {
         title: "Youth",
         description: "Dynamic programs for teenagers to explore faith, build friendships, and discover their purpose in a supportive environment.",
         link: "/life-of-liberty/youth",
-        image: "https://images.pexels.com/photos/1813947/pexels-photo-1813947.jpeg?auto=compress&cs=tinysrgb&w=600"
+        image: "/images/life of liberty/Liberty Website-Growing Disciples Section-Liberty Youth.jpg"
     },
     {
         title: "Young Adults",
         description: "A community for young adults navigating life, career, and faith together in their twenties and thirties.",
         link: "/life-of-liberty/young-adults",
-        image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600"
+        image: "/images/life of liberty/Liberty Website-Growing Disciples Section-Liberty Young Adults.jpg"
     },
     {
         title: "Refresh Women",
         description: "Empowering women to grow in their relationship with God while building strong friendships and supporting one another.",
         link: "/life-of-liberty/refresh-women",
-        image: "https://images.pexels.com/photos/3184611/pexels-photo-3184611.jpeg?auto=compress&cs=tinysrgb&w=600"
+        image: "/images/life of liberty/Liberty Website-Growing Disciples Section-Liberty Refresh Women.jpg"
     },
     {
         title: "Real Men",
         description: "Men's ministry focused on authentic relationships, spiritual growth, and living out biblical manhood in today's world.",
         link: "/life-of-liberty/real-men",
-        image: "https://images.pexels.com/photos/1157394/pexels-photo-1157394.jpeg?auto=compress&cs=tinysrgb&w=600"
+        image: "/images/life of liberty/Liberty Website-Growing Disciples Section-Liberty Real Men.jpg"
     },
     {
         title: "The Coffee House",
         description: "A relaxed, welcoming space for conversation, connection, and community over great coffee and light refreshments.",
         link: "/life-of-liberty/coffee-house",
-        image: "https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=600"
+        image: "/images/life of liberty/Liberty Website-Growing Disciples Section-Liberty Coffee House.jpg"
     },
     {
         title: "Prayer and Teaching Service",
         description: "Join us for focused times of prayer, deeper Bible study, and spiritual growth in an intimate setting.",
         link: "/life-of-liberty/prayer-teaching",
-        image: "https://images.pexels.com/photos/8363028/pexels-photo-8363028.jpeg?auto=compress&cs=tinysrgb&w=600"
+        image: "/images/life of liberty/Liberty Website-Growing Disciples Section-Liberty Prayer&Teaching.jpg"
     },
     {
         title: "ChurchSuite",
         description: "Access our church management system to stay connected, manage your information, and engage with church activities.",
         link: "https://liberty.churchsuite.com",
-        image: "https://images.pexels.com/photos/4144179/pexels-photo-4144179.jpeg?auto=compress&cs=tinysrgb&w=600",
+        image: "/images/life of liberty/Liberty Website-Growing Disciples Section-ChurchSuite.jpg",
         isExternal: true
     }
 ];
@@ -110,9 +110,9 @@ export default function LifeOfLibertyPage() {
     return (
         <div className="min-h-screen bg-white">
             {/* Hero Section */}
-            <div className="relative h-[40vh] md:h-[50vh] overflow-hidden">
+            <div className="relative h-[550px] overflow-hidden">
                 <img
-                    src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                    src="/images/life of liberty/Liberty Website-Growing Disciples Section-Liberty Groups.jpg"
                     alt="Life of Liberty"
                     className="w-full h-full object-cover"
                 />

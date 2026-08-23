@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import SectionTitle from './SectionTitle';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
+import { useSwipe } from './useSwipe';
 
 interface CardProps {
   image: string;
@@ -99,6 +100,8 @@ export default function Media() {
   const prev = () => goTo(index - 1);
   const next = () => goTo(index + 1);
 
+  const swipeHandlers = useSwipe(next, prev);
+
   useEffect(() => {
     if (!transitioning) return;
     const timeout = setTimeout(() => {
@@ -143,6 +146,7 @@ export default function Media() {
             transform: `translateX(${translateX}px)`,
             transition: transitioning ? 'transform 0.35s ease' : 'none',
           }}
+          {...swipeHandlers}
         >
           {cloned.map((card, i) => (
             <MediaCard key={`${card.title}-${i}`} {...card} />

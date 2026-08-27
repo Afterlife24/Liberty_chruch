@@ -8,6 +8,7 @@ import VisionAndValuesPage from './pages/VisionAndValuesPage';
 import WhatWeBelievePage from './pages/WhatWeBelievePage';
 import ExploringFaithPage from './pages/ExploringFaithPage';
 import UpcomingEventsPage from './pages/UpcomingEventsPage';
+import LibertyGroupsSignUpPage from './pages/LibertyGroupsSignUpPage';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/im-new-here/what-we-believe" element={<WhatWeBelievePage />} />
           <Route path="/exploring-faith" element={<ExploringFaithPage />} />
           <Route path="/events" element={<UpcomingEventsPage />} />
+          <Route path="/libertygroups" element={<LibertyGroupsSignUpPage />} />
         </Routes>
         <Footer />
       </div>

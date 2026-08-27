@@ -23,7 +23,6 @@ function App() {
           <Route path="/im-new-here/what-we-believe" element={<WhatWeBelievePage />} />
           <Route path="/exploring-faith" element={<ExploringFaithPage />} />
           <Route path="/events" element={<UpcomingEventsPage />} />
-          <Route path="/libertygroups" element={<LibertyGroupsSignUpPage />} />
         </Routes>
         <Footer />
       </div>

@@ -1,4 +1,4 @@
-import { MapPin, X } from 'lucide-react';
+import { MapPin, X, Instagram, Facebook, Youtube } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 
@@ -99,15 +99,28 @@ export default function Header() {
               />
             </Link>
 
-            {/* Location info */}
-            <div className="hidden sm:flex items-start gap-1.5 text-right">
-              <MapPin className="w-4 h-4 mt-0.5 shrink-0 text-gray-600" />
-              <div className="text-xs text-gray-700 leading-snug">
-                <p className="font-bold uppercase tracking-wide text-black">
-                  Join Us This Sunday At Liberty
-                </p>
-                <p>Gaer Park Drive, NP20 3NN &nbsp;|&nbsp; 10:30AM</p>
-                <p>Risca Scouts Hall, NP11 6LL &nbsp;|&nbsp; 10:30AM</p>
+            {/* Location info + Social icons */}
+            <div className="hidden sm:flex items-center gap-4">
+              <div className="flex items-start gap-1.5 text-right">
+                <MapPin className="w-4 h-4 mt-0.5 shrink-0 text-gray-600" />
+                <div className="text-xs text-gray-700 leading-snug">
+                  <p className="font-bold uppercase tracking-wide text-black">
+                    Join Us This Sunday At Liberty
+                  </p>
+                  <p>Gaer Park Drive, NP20 3NN &nbsp;|&nbsp; 10:30AM</p>
+                  <p>Risca Scouts Hall, NP11 6LL &nbsp;|&nbsp; 10:30AM</p>
+                </div>
+              </div>
+              <div className="flex gap-2 ml-2">
+                <a href="https://www.instagram.com/libertychurchuk?igsi=Y2NsYzl1ZGpnc3R1" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-gray-600 hover:text-black transition-colors">
+                  <Instagram className="w-4 h-4" />
+                </a>
+                <a href="https://www.facebook.com/share/1Dc7WJi3Z9/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-gray-600 hover:text-black transition-colors">
+                  <Facebook className="w-4 h-4" />
+                </a>
+                <a href="https://www.youtube.com/@libertychurchuk8888" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="text-gray-600 hover:text-black transition-colors">
+                  <Youtube className="w-4 h-4" />
+                </a>
               </div>
             </div>
 

@@ -18,7 +18,7 @@ const lightboxContent: Record<string, React.ReactNode> = {
     <div className="space-y-4 text-gray-700 text-base leading-relaxed">
       <p>ChurchSuite is our church management system where you can manage your details, sign up for groups and events, and stay connected with the life of the church.</p>
       <a
-        href="https://liberty.churchsuite.com"
+        href="https://libertychurchwales.churchsuite.com"
         target="_blank"
         rel="noopener noreferrer"
         className="inline-block bg-gray-900 text-white font-condensed font-bold uppercase tracking-widest px-6 py-3 rounded-md hover:bg-black transition-colors"
@@ -33,7 +33,7 @@ const lightboxContent: Record<string, React.ReactNode> = {
       <p>At Liberty, we believe the Church is not defined by a building or a Sunday meeting, but by people living life together on mission. Liberty Groups are how we disciple, care, and mobilise people.</p>
       <p>In a world of isolation and hurry, Liberty Groups create spaces of transformation where you are known, loved, discipled, and mobilised. Whether you are around a dinner table, opening Scripture, praying with friends, or serving your city, you are being the church.</p>
       <p>Each Liberty Group has a different focus, but all share the same purpose: to see people formed in Christ and sent with purpose.</p>
-      <p className="font-semibold text-gray-900">Our next term of Liberty Groups will be live for sign up from w/c 7th September... watch this space!</p>
+      <p className="font-semibold text-gray-900">Our next term of Liberty Groups will be live for sign up from w/c 7th September... <a href="https://libertychurchwales.churchsuite.com/-/smallgroups/3c0f6ccb-b2f2-4f2c-9598-0c30696f99e4" target="_blank" rel="noopener noreferrer" class="underline hover:text-gray-600 transition-colors">click here to sign up</a>!</p>
     </div>
   ),
   'liberty-kids': (
@@ -134,28 +134,29 @@ function Lightbox({ lightboxKey, image, onClose }: { lightboxKey: string; image:
       className="fixed inset-0 z-50 bg-black/70 flex items-center justify-center p-4"
       onClick={handleBackdrop}
     >
-      <div className="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl">
+      <div className="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] shadow-2xl relative flex flex-col">
+        {/* Fixed Close Button */}
+        <button
+          onClick={onClose}
+          className="absolute top-3 right-3 z-20 bg-white/90 hover:bg-white text-gray-900 p-2 rounded-full transition-colors shadow-lg"
+          aria-label="Close"
+        >
+          <X size={20} />
+        </button>
+        {/* Scrollable Content */}
+        <div className="overflow-y-auto flex-1">
         {/* Banner */}
-        <div className="relative w-full h-[200px] sm:h-[260px] overflow-hidden rounded-t-lg">
-          <img src={image} alt={lightboxTitles[lightboxKey]} className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/60" />
-          <button
-            onClick={onClose}
-            className="absolute top-4 right-4 bg-white/90 hover:bg-white text-gray-900 p-2 rounded-full transition-colors shadow-lg"
-            aria-label="Close"
-          >
-            <X size={20} />
-          </button>
-          <div className="absolute bottom-4 left-6">
-            <h2 className="text-white font-condensed font-black text-3xl uppercase leading-none">
-              {lightboxTitles[lightboxKey]}
-            </h2>
-          </div>
+        <div className="relative w-full overflow-hidden rounded-t-lg">
+          <img src={image} alt={lightboxTitles[lightboxKey]} className="w-full h-auto block" />
         </div>
 
         {/* Content */}
         <div className="p-6 sm:p-8">
+          <h2 className="font-condensed font-black text-2xl uppercase text-gray-900 mb-4">
+            {lightboxTitles[lightboxKey]}
+          </h2>
           {lightboxContent[lightboxKey]}
+        </div>
         </div>
       </div>
     </div>
@@ -186,16 +187,6 @@ function StoryCard({ image, label, title, lightboxKey, externalLink, onLightboxO
         alt={title}
         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-      <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4">
-        <p className="text-white/80 font-condensed text-xs uppercase tracking-widest leading-tight">{label}</p>
-        <p className="text-white font-condensed font-black text-sm sm:text-base md:text-lg uppercase leading-tight mt-0.5">{title}</p>
-      </div>
-      {externalLink && (
-        <div className="absolute top-3 right-3">
-          <span className="text-white text-xs">↗</span>
-        </div>
-      )}
     </div>
   );
 }
@@ -268,7 +259,12 @@ export default function LifeOfLiberty() {
   const [index, setIndex] = useState(OFFSET);
   const [transitioning, setTransitioning] = useState(true);
   const [activeLightbox, setActiveLightbox] = useState<{ key: string; image: string } | null>(null);
+  const [, setMounted] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const getCardWidth = () => {
     if (!containerRef.current) return 0;
@@ -303,7 +299,7 @@ export default function LifeOfLiberty() {
   const translateX = -(index * getCardWidth());
 
   return (
-    <section className="max-w-5xl mx-auto px-4 py-8">
+    <section id="life-of-liberty" className="max-w-5xl mx-auto px-4 py-8 scroll-mt-32">
       <SectionTitle title="Life of Liberty" />
       <div className="relative group/section overflow-hidden">
         {/* Left Arrow */}

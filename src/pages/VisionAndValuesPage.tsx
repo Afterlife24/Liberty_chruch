@@ -57,7 +57,7 @@ export default function VisionAndValuesPage() {
         <img
           src="/images/pages_banners_internal/Liberty Website-Internal Page Banner-Vision&Values.jpg"
           alt="Vision and Values"
-          className="w-full h-[650px] block object-cover object-bottom"
+          className="w-full h-auto block"
         />
         {/* Back Button */}
         <Link

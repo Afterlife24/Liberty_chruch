@@ -15,7 +15,11 @@ function MediaCard({ image, title, link }: CardProps) {
 
   const handleClick = () => {
     if (link) {
-      navigate(link);
+      if (link.startsWith('http')) {
+        window.open(link, '_blank', 'noopener,noreferrer');
+      } else {
+        navigate(link);
+      }
     }
   };
 
@@ -33,12 +37,6 @@ function MediaCard({ image, title, link }: CardProps) {
         alt={title}
         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-      <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4">
-        <p className="text-white font-condensed font-black text-sm sm:text-base md:text-lg uppercase leading-tight">
-          {title}
-        </p>
-      </div>
     </div>
   );
 }
@@ -47,31 +45,16 @@ const cards: CardProps[] = [
   {
     image: '/images/media/Liberty Website-Media Section-Listen Again.jpg',
     title: 'Listen Again',
-    link: '/media/listen-again',
+    link: 'https://soundcloud.com/liberty-church-uk',
   },
   {
     image: '/images/media/Liberty Website-Media Section-Video Content.jpg',
-    title: 'Video Sessions',
-    link: '/media/video-sessions',
+    title: 'Video Content',
+    link: 'https://www.youtube.com/@libertychurchuk8888',
   },
   {
     image: '/images/media/Liberty Website-Media Section-Additional Resources.jpg',
-    title: 'Study Resources',
-    link: '/media/more-resources',
-  },
-  {
-    image: '/images/media/Liberty Website-Media Section-Video Content.jpg',
-    title: 'Live Stream',
-    link: '/media/video-sessions',
-  },
-  {
-    image: '/images/media/Liberty Website-Media Section-Listen Again.jpg',
-    title: 'Prayer Resources',
-    link: '/media/more-resources',
-  },
-  {
-    image: '/images/media/Liberty Website-Media Section-Additional Resources.jpg',
-    title: 'Reading List',
+    title: 'Additional Resources',
     link: '/media/more-resources',
   },
 ];
@@ -82,7 +65,12 @@ const OFFSET = 3;
 export default function Media() {
   const [index, setIndex] = useState(OFFSET);
   const [transitioning, setTransitioning] = useState(true);
+  const [, setMounted] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const getCardWidth = () => {
     if (!containerRef.current) return 0;
@@ -117,7 +105,7 @@ export default function Media() {
   const translateX = -(index * getCardWidth());
 
   return (
-    <section className="max-w-5xl mx-auto px-4 py-8">
+    <section id="media" className="max-w-5xl mx-auto px-4 py-8 scroll-mt-32">
       <SectionTitle title="Media" />
       <div className="relative group/section overflow-hidden">
         {/* Left Arrow */}

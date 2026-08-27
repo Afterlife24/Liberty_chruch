@@ -28,7 +28,7 @@ export default function UpcomingEvents() {
   }, []);
 
   return (
-    <section className="max-w-5xl mx-auto px-4 py-8">
+    <section id="upcoming-events" className="max-w-5xl mx-auto px-4 py-8 scroll-mt-32">
       <SectionTitle title="Upcoming Events" />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* Events Card */}
@@ -78,7 +78,9 @@ export default function UpcomingEvents() {
           </p>
 
           <a
-            href="#"
+            href="https://chat.whatsapp.com/B6RoWIOeMwBEgAKddLSDco?mode=wwt"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block bg-gray-900 hover:bg-black text-white text-xs font-condensed font-semibold uppercase tracking-widest py-2.5 px-5 rounded transition-colors self-start mt-auto"
           >
             Receive updates via WhatsApp
@@ -90,21 +92,27 @@ export default function UpcomingEvents() {
             </p>
             <div className="flex gap-3">
               <a
-                href="#"
+                href="https://www.instagram.com/libertychurchuk?igsi=Y2NsYzl1ZGpnc3R1"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Instagram"
                 className="text-white hover:text-white/70 transition-colors"
               >
                 <Instagram className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="https://www.facebook.com/share/1Dc7WJi3Z9/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Facebook"
                 className="text-white hover:text-white/70 transition-colors"
               >
                 <Facebook className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="https://www.youtube.com/@libertychurchuk8888"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="YouTube"
                 className="text-white hover:text-white/70 transition-colors"
               >

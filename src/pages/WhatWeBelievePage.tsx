@@ -126,11 +126,11 @@ export default function WhatWeBelievePage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <div className="relative w-full h-[650px] overflow-hidden">
+      <div className="relative w-full">
         <img
           src="/images/pages_banners_internal/Liberty Website-Internal Page Banner-What We Believe.jpg"
           alt="What We Believe"
-          className="w-full h-full object-cover object-center"
+          className="w-full h-auto block"
         />
         {/* Back Button */}
         <Link

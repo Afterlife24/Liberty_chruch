@@ -100,7 +100,7 @@ const subPages = [
     {
         title: "ChurchSuite",
         description: "Access our church management system to stay connected, manage your information, and engage with church activities.",
-        link: "https://liberty.churchsuite.com",
+        link: "https://libertychurchwales.churchsuite.com",
         image: "/images/life of liberty/Liberty Website-Growing Disciples Section-ChurchSuite.jpg",
         isExternal: true
     }

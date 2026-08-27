@@ -29,11 +29,11 @@ export default function WhoIsJesusPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
-      <div className="relative w-full h-[650px] overflow-hidden">
+      <div className="relative w-full">
         <img
           src="/images/pages_banners_internal/Liberty Website-Internal Page Banner-Who is Jesus_.jpg"
           alt="Who is Jesus?"
-          className="w-full h-full object-cover object-center"
+          className="w-full h-auto block"
         />
         <Link
           to="/"

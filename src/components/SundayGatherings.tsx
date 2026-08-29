@@ -94,8 +94,15 @@ const lightboxContent: Record<string, React.ReactNode> = {
   ),
   'giving-donations': (
     <div className="space-y-4 text-gray-700 text-base leading-relaxed">
-      <p>Your generosity helps us continue to rebuild, renew, and restore lives in our community and beyond. Every gift makes a difference.</p>
-      <p className="font-semibold text-gray-900">More information coming soon.</p>
+      <p>If you would like to support the work of Liberty Church, you can give using these details:</p>
+      <div className="bg-gray-50 rounded-lg p-4 border-l-4 border-gray-900">
+        <p className="font-semibold text-gray-900">Liberty Church</p>
+        <p>Sort Code: 20-18-17</p>
+        <p>Account Number: 63979261</p>
+      </div>
+      <p>You can add a reference if giving to a specific appeal/project (i.e. NEPAL or KIDS CHURCH PROJECT) or mark the gift TITHE/OFFERING for general gifts.</p>
+      <p>For any further information about giving, you can contact us at <a href="mailto:admin@libertychurchuk.com" className="text-gray-900 font-semibold underline hover:text-gray-600 transition-colors">admin@libertychurchuk.com</a></p>
+      <p className="font-semibold text-gray-900">Thank you for your continued generosity.</p>
       <div className="bg-gray-900 text-white rounded-lg p-6 text-center mt-6">
         <h3 className="font-condensed font-black text-xl uppercase mb-2">Join Us This Sunday</h3>
         <p className="text-gray-300 text-sm mb-4">Experience the warmth of our community and discover what it means to be part of the Liberty Church family.</p>

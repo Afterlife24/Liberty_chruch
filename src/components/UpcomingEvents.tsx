@@ -4,16 +4,10 @@ import { useState, useEffect } from 'react';
 
 const events = [
   {
-    image: '/images/uncomingevents/Liberty Website-Events Section-Life Matters-23August.jpg',
+    image: '/images/uncomingevents/Liberty Website-Events Section-Risca Harvest Feast 2026.jpg',
   },
   {
-    image: '/images/uncomingevents/Liberty Website-Events Section-LK-Summer Club26.jpg',
-  },
-  {
-    image: '/images/uncomingevents/Liberty Website-Events Section-CH Quiz August26.jpg',
-  },
-  {
-    image: '/images/uncomingevents/Liberty Website-Events Section-Summer Prayer Nights.jpg',
+    image: '/images/uncomingevents/Genesis Istanbul Header.png',
   },
 ];
 

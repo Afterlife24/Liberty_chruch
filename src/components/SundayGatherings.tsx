@@ -21,7 +21,7 @@ const lightboxContent: Record<string, React.ReactNode> = {
         <p className="font-semibold text-gray-900">Location:</p>
         <p>Gaer Park Drive, Newport, NP20 3NN</p>
         <p className="mt-2 font-semibold text-gray-900">Time:</p>
-        <p>Sundays at 10:30AM</p>
+        <p>Sundays at 9AM &amp; 10:45AM</p>
       </div>
       <div className="bg-gray-900 text-white rounded-lg p-6 text-center mt-6">
         <h3 className="font-condensed font-black text-xl uppercase mb-2">Join Us This Sunday At Newport</h3>
@@ -76,7 +76,7 @@ const lightboxContent: Record<string, React.ReactNode> = {
       <div className="border-t border-gray-100 pt-4 space-y-3">
         <div>
           <p className="font-semibold text-gray-900">Newport</p>
-          <p>Gaer Park Drive, NP20 3NN | Sundays 10:30AM</p>
+          <p>Gaer Park Drive, NP20 3NN | Sundays 9AM &amp; 10:45AM</p>
         </div>
         <div>
           <p className="font-semibold text-gray-900">Risca</p>
@@ -116,9 +116,9 @@ const lightboxContent: Record<string, React.ReactNode> = {
     <div className="space-y-4 text-gray-700 text-base leading-relaxed">
       <p>Our Sunday worship services are a time for the whole church family to gather, worship God, hear from His Word, and be encouraged together.</p>
       <div className="border-t border-gray-100 pt-4">
-        <p className="font-semibold text-gray-900">Every Sunday at 10:30AM</p>
-        <p>Newport: Gaer Park Drive, NP20 3NN</p>
-        <p>Risca: Scouts Hall, NP11 6LL</p>
+        <p className="font-semibold text-gray-900">Every Sunday</p>
+        <p>Newport: Gaer Park Drive, NP20 3NN | 9AM &amp; 10:45AM</p>
+        <p>Risca: Scouts Hall, NP11 6LL | 10:30AM</p>
       </div>
       <div className="bg-gray-900 text-white rounded-lg p-6 text-center mt-6">
         <h3 className="font-condensed font-black text-xl uppercase mb-2">Join Us This Sunday</h3>
@@ -248,7 +248,7 @@ const cards: CardProps[] = [
   },
   {
     image: '/images/sundaygathering/Liberty Website-Sunday Gatherings Section-Worship Nights.jpg',
-    label: 'Sunday 10:30 AM',
+    label: 'Sundays',
     title: 'Worship Services',
     lightboxKey: 'worship-services',
   },

@@ -144,7 +144,7 @@ function PlanningYourVisitLightbox({ onClose }: LightboxProps) {
             <div className="bg-gray-50 p-4 rounded-lg">
               <p className="font-semibold text-gray-900 mb-1">Newport</p>
               <p className="text-gray-700 text-sm">Gaer Park Drive, NP20 3NN</p>
-              <p className="text-gray-700 text-sm">Sundays at 10:30AM</p>
+              <p className="text-gray-700 text-sm">Sundays at 9AM &amp; 10:45AM</p>
             </div>
             <div className="bg-gray-50 p-4 rounded-lg">
               <p className="font-semibold text-gray-900 mb-1">Risca</p>

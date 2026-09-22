@@ -107,7 +107,7 @@ export default function Header() {
                   <p className="font-bold uppercase tracking-wide text-black">
                     Join Us This Sunday At Liberty
                   </p>
-                  <p>Gaer Park Drive, NP20 3NN &nbsp;|&nbsp; 10:30AM</p>
+                  <p>Gaer Park Drive, NP20 3NN &nbsp;|&nbsp; 9AM &amp; 10:45AM</p>
                   <p>Risca Scouts Hall, NP11 6LL &nbsp;|&nbsp; 10:30AM</p>
                 </div>
               </div>

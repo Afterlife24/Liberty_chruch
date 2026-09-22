@@ -28,6 +28,7 @@ export default function Footer() {
             <h4 className="font-condensed font-black text-lg uppercase tracking-wide mb-4">Our Locations</h4>
             <div className="space-y-2 text-gray-300 text-sm">
               <p>Gaer Park Drive, Newport, NP20 3NN</p>
+              <p className="text-gray-400">Sundays at 9AM &amp; 10:45AM</p>
               <p>Risca Scouts Hall, NP11 6LL</p>
               <p className="text-gray-400">Sundays at 10:30AM</p>
             </div>

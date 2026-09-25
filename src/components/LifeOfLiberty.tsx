@@ -33,7 +33,7 @@ const lightboxContent: Record<string, React.ReactNode> = {
       <p>At Liberty, we believe the Church is not defined by a building or a Sunday meeting, but by people living life together on mission. Liberty Groups are how we disciple, care, and mobilise people.</p>
       <p>In a world of isolation and hurry, Liberty Groups create spaces of transformation where you are known, loved, discipled, and mobilised. Whether you are around a dinner table, opening Scripture, praying with friends, or serving your city, you are being the church.</p>
       <p>Each Liberty Group has a different focus, but all share the same purpose: to see people formed in Christ and sent with purpose.</p>
-      <p className="font-semibold text-gray-900">Our next term of Liberty Groups will be live for sign up from w/c 7th September... <a href="https://libertychurchwales.churchsuite.com/-/smallgroups/3c0f6ccb-b2f2-4f2c-9598-0c30696f99e4" target="_blank" rel="noopener noreferrer" class="underline hover:text-gray-600 transition-colors">click here to sign up</a>!</p>
+      <p className="font-semibold text-gray-900"><a href="https://libertychurchwales.churchsuite.com/-/smallgroups/3c0f6ccb-b2f2-4f2c-9598-0c30696f99e4" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600 transition-colors">Click here to sign up to a Liberty Group!</a></p>
     </div>
   ),
   'liberty-kids': (
@@ -47,9 +47,9 @@ const lightboxContent: Record<string, React.ReactNode> = {
         <p className="mt-3">Please send your kids with labelled water bottles and sunscreen on when it is sunny as we love to play games outside when we can!</p>
       </div>
       <div className="border-t border-gray-100 pt-4">
-        <h4 className="font-condensed font-black text-lg uppercase text-gray-900 mb-2">Unmanned Crèche</h4>
+        <h4 className="font-condensed font-black text-lg uppercase text-gray-900 mb-2">Unmanned Crèche - Gaer Hub</h4>
         <p>We have a crèche room available for parents and carers who would like to take their little ones out of the service. You are free to go in and out of this space as much as you need.</p>
-        <p className="mt-3">The room is positioned in the kids wing of the building. There are toys, changing facilities and bottle warming available to you and we have a live stream running so you can still feel connected to the service.</p>
+        <p className="mt-3">The room is positioned off of the main auditorium.</p>
       </div>
     </div>
   ),
@@ -62,6 +62,7 @@ const lightboxContent: Record<string, React.ReactNode> = {
   'real-men': (
     <div className="space-y-4 text-gray-700 text-base leading-relaxed">
       <p>A chance to grow together as men, to encourage one another to go after all that God has for us. Build friendships, grow in faith and discover what it means to be a real man of God.</p>
+      <p className="font-semibold text-gray-900">Keep an eye on our calendar to see when we are next gathering!</p>
     </div>
   ),
   'refresh-women': (
@@ -80,6 +81,13 @@ const lightboxContent: Record<string, React.ReactNode> = {
       <div className="border-t border-gray-100 pt-4">
         <p className="text-gray-600">Liberty Church, Gaer Park Drive, Newport, NP20 3NN</p>
       </div>
+      <div className="border-t border-gray-100 pt-4">
+        <h4 className="font-condensed font-black text-lg uppercase text-gray-900 mb-2">Follow Us</h4>
+        <div className="flex flex-col gap-1">
+          <a href="https://www.instagram.com/thecoffeehouseuk" target="_blank" rel="noopener noreferrer" className="text-gray-900 underline hover:text-gray-600 transition-colors">Instagram: thecoffeehouseuk</a>
+          <a href="https://www.facebook.com/thecoffeehouse.uk" target="_blank" rel="noopener noreferrer" className="text-gray-900 underline hover:text-gray-600 transition-colors">Facebook: thecoffeehouse.uk</a>
+        </div>
+      </div>
     </div>
   ),
   'young-adults': (
@@ -91,9 +99,9 @@ const lightboxContent: Record<string, React.ReactNode> = {
   'youth': (
     <div className="space-y-4 text-gray-700 text-base leading-relaxed">
       <p>"We're passionate about the young people in our city and are sold out in our desire to become a group of people who 'love God &amp; love people passionately, live dangerously and are influential'."</p>
-      <p>We meet every Friday during term-time from 7–9pm at our Gaer facility for a great night of fun, community and discipleship. Every other Sunday we have Youth AM during the preaching for young people in our Sunday service.</p>
-      <p>We mix between gathering at our Gaer venue, in homes across the city and joining with Firestarters Wales Youth Ministry.</p>
-      <p className="font-semibold text-gray-900">For more information, get in touch via the link below!</p>
+      <p>We meet every Friday during term-time from 7–9pm at our Gaer Hub and also for Girls and Boys nights across our city.</p>
+      <p>We mix between gathering at our Gaer venue, in homes across the city and joining with Firestarters Wales Youth Ministry. For more information on Firestarters visit <a href="https://www.firestarterswales.org/" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600 transition-colors">www.firestarterswales.org</a></p>
+      <p className="font-semibold text-gray-900">Please see our calendar for all the dates!</p>
       <a
         href="mailto:youth@libertychurchuk.com"
         className="inline-block bg-gray-900 text-white font-condensed font-bold uppercase tracking-widest px-6 py-3 rounded-md hover:bg-black transition-colors"

@@ -148,7 +148,7 @@ function PlanningYourVisitLightbox({ onClose }: LightboxProps) {
             </div>
             <div className="bg-gray-50 p-4 rounded-lg">
               <p className="font-semibold text-gray-900 mb-1">Risca</p>
-              <p className="text-gray-700 text-sm">Risca Scouts Hall, NP11 6LL</p>
+              <p className="text-gray-700 text-sm">Risca Scouts Hall, Hafod Y Bryn, Risca, NP11 6LL</p>
               <p className="text-gray-700 text-sm">Sundays at 10:30AM</p>
             </div>
           </div>
@@ -156,11 +156,11 @@ function PlanningYourVisitLightbox({ onClose }: LightboxProps) {
           <div className="border-t border-gray-100 pt-4">
             <h4 className="font-condensed font-bold text-lg uppercase text-gray-900 mb-2">What to Expect</h4>
             <ul className="space-y-2 text-gray-700 text-sm">
-              <li>Arrive 10-15 minutes early to grab a coffee and meet our welcome team</li>
+              <li>Arrive 10-15 minutes early to meet our welcome team</li>
               <li>Contemporary worship music followed by Bible-based teaching</li>
               <li>Children's programmes available during the service</li>
               <li>Come as you are — no dress code!</li>
-              <li>Free parking at both locations</li>
+              <li>There is free parking at our Risca location and street parking at Liberty Gaer Hub</li>
             </ul>
           </div>
 

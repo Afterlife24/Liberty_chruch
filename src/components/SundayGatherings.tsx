@@ -23,13 +23,6 @@ const lightboxContent: Record<string, React.ReactNode> = {
         <p className="mt-2 font-semibold text-gray-900">Time:</p>
         <p>Sundays at 9AM &amp; 10:45AM</p>
       </div>
-      <div className="bg-gray-900 text-white rounded-lg p-6 text-center mt-6">
-        <h3 className="font-condensed font-black text-xl uppercase mb-2">Join Us This Sunday At Newport</h3>
-        <p className="text-gray-300 text-sm mb-4">Experience the warmth of our Newport community and discover what it means to be part of the Liberty Church family.</p>
-        <div className="flex flex-col sm:flex-row gap-3 justify-center">
-          <button className="border-2 border-white text-white font-condensed font-bold uppercase tracking-wide px-6 py-2.5 rounded-md hover:bg-white/10 transition-colors text-sm">Contact Newport Team</button>
-        </div>
-      </div>
     </div>
   ),
   'risca': (
@@ -37,59 +30,23 @@ const lightboxContent: Record<string, React.ReactNode> = {
       <p>Join us this Sunday at our Risca location. A welcoming community where you can grow in faith and build lasting friendships.</p>
       <div className="border-t border-gray-100 pt-4">
         <p className="font-semibold text-gray-900">Location:</p>
-        <p>Risca Scouts Hall, NP11 6LL</p>
+        <p>Risca Scouts Hall, Hafod Y Bryn, Risca, NP11 6LL</p>
         <p className="mt-2 font-semibold text-gray-900">Time:</p>
         <p>Sundays at 10:30AM</p>
-      </div>
-      <div className="bg-gray-900 text-white rounded-lg p-6 text-center mt-6">
-        <h3 className="font-condensed font-black text-xl uppercase mb-2">Join Us This Sunday At Risca</h3>
-        <p className="text-gray-300 text-sm mb-4">Experience the warmth of our Risca community and discover what it means to be part of the Liberty Church family.</p>
-        <div className="flex flex-col sm:flex-row gap-3 justify-center">
-          <button className="border-2 border-white text-white font-condensed font-bold uppercase tracking-wide px-6 py-2.5 rounded-md hover:bg-white/10 transition-colors text-sm">Contact Risca Team</button>
-        </div>
       </div>
     </div>
   ),
   'prayer-requests': (
     <div className="space-y-4 text-gray-700 text-base leading-relaxed">
-      <p>We believe in the power of prayer. Submit your prayer requests through ChurchSuite and our prayer team will be lifting you up.</p>
+      <p>We believe in the power of prayer. Submit your prayer request or praise report and our prayer team will be lifting you up.</p>
       <a
-        href="https://libertychurchwales.churchsuite.com"
+        href="https://libertychurchwales.churchsuite.com/-/forms/3pviyvqw"
         target="_blank"
         rel="noopener noreferrer"
         className="inline-block bg-gray-900 text-white font-condensed font-bold uppercase tracking-widest px-6 py-3 rounded-md hover:bg-black transition-colors"
       >
-        Submit Prayer Request
+        Submit Prayer Request / Praise Report
       </a>
-      <div className="bg-gray-900 text-white rounded-lg p-6 text-center mt-6">
-        <h3 className="font-condensed font-black text-xl uppercase mb-2">Join Us This Sunday</h3>
-        <p className="text-gray-300 text-sm mb-4">Experience the warmth of our community and discover what it means to be part of the Liberty Church family.</p>
-        <div className="flex flex-col sm:flex-row gap-3 justify-center">
-          <button className="border-2 border-white text-white font-condensed font-bold uppercase tracking-wide px-6 py-2.5 rounded-md hover:bg-white/10 transition-colors text-sm">Contact Team</button>
-        </div>
-      </div>
-    </div>
-  ),
-  'places-of-liberty': (
-    <div className="space-y-4 text-gray-700 text-base leading-relaxed">
-      <p>Liberty Church gathers across multiple locations. Wherever you are, there is a place for you in our family.</p>
-      <div className="border-t border-gray-100 pt-4 space-y-3">
-        <div>
-          <p className="font-semibold text-gray-900">Newport</p>
-          <p>Gaer Park Drive, NP20 3NN | Sundays 9AM &amp; 10:45AM</p>
-        </div>
-        <div>
-          <p className="font-semibold text-gray-900">Risca</p>
-          <p>Scouts Hall, NP11 6LL | Sundays 10:30AM</p>
-        </div>
-      </div>
-      <div className="bg-gray-900 text-white rounded-lg p-6 text-center mt-6">
-        <h3 className="font-condensed font-black text-xl uppercase mb-2">Join Us This Sunday</h3>
-        <p className="text-gray-300 text-sm mb-4">Experience the warmth of our community and discover what it means to be part of the Liberty Church family.</p>
-        <div className="flex flex-col sm:flex-row gap-3 justify-center">
-          <button className="border-2 border-white text-white font-condensed font-bold uppercase tracking-wide px-6 py-2.5 rounded-md hover:bg-white/10 transition-colors text-sm">Contact Team</button>
-        </div>
-      </div>
     </div>
   ),
   'giving-donations': (
@@ -101,32 +58,17 @@ const lightboxContent: Record<string, React.ReactNode> = {
         <p>Account Number: 63979261</p>
       </div>
       <p>You can add a reference if giving to a specific appeal/project (i.e. NEPAL or KIDS CHURCH PROJECT) or mark the gift TITHE/OFFERING for general gifts.</p>
+      <p>You can also give online:</p>
+      <a
+        href="https://libertychurchwales.churchsuite.com/donate"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block bg-gray-900 text-white font-condensed font-bold uppercase tracking-widest px-6 py-3 rounded-md hover:bg-black transition-colors"
+      >
+        Give Online
+      </a>
       <p>For any further information about giving, you can contact us at <a href="mailto:admin@libertychurchuk.com" className="text-gray-900 font-semibold underline hover:text-gray-600 transition-colors">admin@libertychurchuk.com</a></p>
       <p className="font-semibold text-gray-900">Thank you for your continued generosity.</p>
-      <div className="bg-gray-900 text-white rounded-lg p-6 text-center mt-6">
-        <h3 className="font-condensed font-black text-xl uppercase mb-2">Join Us This Sunday</h3>
-        <p className="text-gray-300 text-sm mb-4">Experience the warmth of our community and discover what it means to be part of the Liberty Church family.</p>
-        <div className="flex flex-col sm:flex-row gap-3 justify-center">
-          <button className="border-2 border-white text-white font-condensed font-bold uppercase tracking-wide px-6 py-2.5 rounded-md hover:bg-white/10 transition-colors text-sm">Contact Team</button>
-        </div>
-      </div>
-    </div>
-  ),
-  'worship-services': (
-    <div className="space-y-4 text-gray-700 text-base leading-relaxed">
-      <p>Our Sunday worship services are a time for the whole church family to gather, worship God, hear from His Word, and be encouraged together.</p>
-      <div className="border-t border-gray-100 pt-4">
-        <p className="font-semibold text-gray-900">Every Sunday</p>
-        <p>Newport: Gaer Park Drive, NP20 3NN | 9AM &amp; 10:45AM</p>
-        <p>Risca: Scouts Hall, NP11 6LL | 10:30AM</p>
-      </div>
-      <div className="bg-gray-900 text-white rounded-lg p-6 text-center mt-6">
-        <h3 className="font-condensed font-black text-xl uppercase mb-2">Join Us This Sunday</h3>
-        <p className="text-gray-300 text-sm mb-4">Experience the warmth of our community and discover what it means to be part of the Liberty Church family.</p>
-        <div className="flex flex-col sm:flex-row gap-3 justify-center">
-          <button className="border-2 border-white text-white font-condensed font-bold uppercase tracking-wide px-6 py-2.5 rounded-md hover:bg-white/10 transition-colors text-sm">Contact Team</button>
-        </div>
-      </div>
     </div>
   ),
 };
@@ -134,10 +76,8 @@ const lightboxContent: Record<string, React.ReactNode> = {
 const lightboxTitles: Record<string, string> = {
   'newport': 'Newport',
   'risca': 'Risca',
-  'prayer-requests': 'Prayer Requests',
-  'places-of-liberty': 'Places of Liberty',
+  'prayer-requests': 'Prayer & Praise',
   'giving-donations': 'Giving & Donations',
-  'worship-services': 'Worship Services',
 };
 
 // ── Lightbox component ────────────────────────────────────────────────────────
@@ -231,14 +171,8 @@ const cards: CardProps[] = [
   {
     image: '/images/sundaygathering/Liberty Website-Sunday Gatherings Section-Prayer&Praise.jpg',
     label: 'Prayer Ministry',
-    title: 'Prayer Requests',
+    title: 'Prayer & Praise',
     lightboxKey: 'prayer-requests',
-  },
-  {
-    image: '/images/sundaygathering/Liberty Website-Sunday Gatherings Section-Places of Liberty.jpg',
-    label: 'Our Locations',
-    title: 'Places of Liberty',
-    lightboxKey: 'places-of-liberty',
   },
   {
     image: '/images/sundaygathering/Liberty Website-Sunday Gatherings Section-Giving&Donations.jpg',
@@ -246,16 +180,10 @@ const cards: CardProps[] = [
     title: 'Giving & Donations',
     lightboxKey: 'giving-donations',
   },
-  {
-    image: '/images/sundaygathering/Liberty Website-Sunday Gatherings Section-Worship Nights.jpg',
-    label: 'Sundays',
-    title: 'Worship Services',
-    lightboxKey: 'worship-services',
-  },
 ];
 
-const cloned = [...cards.slice(-3), ...cards, ...cards.slice(0, 3)];
-const OFFSET = 3;
+const cloned = [...cards.slice(-2), ...cards, ...cards.slice(0, 2)];
+const OFFSET = 2;
 
 // ── Main component ────────────────────────────────────────────────────────────
 

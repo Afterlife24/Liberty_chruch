@@ -9,6 +9,9 @@ const events = [
   {
     image: '/images/uncomingevents/Genesis Istanbul Header.png',
   },
+  {
+    image: '/images/uncomingevents/Light Party 2026-website event.jpg',
+  },
 ];
 
 export default function UpcomingEvents() {

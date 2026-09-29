@@ -175,7 +175,7 @@ const cards: CardProps[] = [
     lightboxKey: 'prayer-requests',
   },
   {
-    image: '/images/sundaygathering/Liberty Website-Sunday Gatherings Section-Giving&Donations.jpg',
+    image: '/images/sundaygathering/Liberty Website-Sunday Gatherings Section-Giving&Donations-2.jpg',
     label: 'Support Ministry',
     title: 'Giving & Donations',
     lightboxKey: 'giving-donations',

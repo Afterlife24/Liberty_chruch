@@ -57,7 +57,7 @@ const lightboxContent: Record<string, React.ReactNode> = {
         <p>Sort Code: 20-18-17</p>
         <p>Account Number: 63979261</p>
       </div>
-      <p>You can add a reference if giving to a specific appeal/project (i.e. NEPAL or KIDS CHURCH PROJECT) or mark the gift TITHE/OFFERING for general gifts.</p>
+      <p>If your gift is for a specific appeal or project, in addition to your regular giving, please add the name of the appeal or project as the payment reference.</p>
       <p>You can also give online:</p>
       <a
         href="https://libertychurchwales.churchsuite.com/donate"
@@ -77,7 +77,7 @@ const lightboxTitles: Record<string, string> = {
   'newport': 'Newport',
   'risca': 'Risca',
   'prayer-requests': 'Prayer & Praise',
-  'giving-donations': 'Giving & Donations',
+  'giving-donations': 'Giving & Generosity',
 };
 
 // ── Lightbox component ────────────────────────────────────────────────────────

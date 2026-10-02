@@ -12,6 +12,12 @@ const events = [
   {
     image: '/images/uncomingevents/Light Party 2026-website event.jpg',
   },
+  {
+    image: '/images/uncomingevents/17th oct.png',
+  },
+  {
+    image: '/images/uncomingevents/31st oct.png',
+  },
 ];
 
 export default function UpcomingEvents() {

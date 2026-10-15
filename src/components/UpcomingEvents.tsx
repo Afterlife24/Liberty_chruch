@@ -4,13 +4,7 @@ import { useState, useEffect } from 'react';
 
 const events = [
   {
-    image: '/images/uncomingevents/Liberty Website-Events Section-Risca Harvest Feast 2026.jpg',
-  },
-  {
     image: '/images/uncomingevents/Genesis Istanbul Header.png',
-  },
-  {
-    image: '/images/uncomingevents/Light Party 2026-website event.jpg',
   },
   {
     image: '/images/uncomingevents/17th oct.png',

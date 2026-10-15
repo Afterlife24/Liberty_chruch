@@ -4,13 +4,13 @@ import { useState, useEffect } from 'react';
 
 const events = [
   {
-    image: '/images/uncomingevents/Genesis Istanbul Header.png',
-  },
-  {
     image: '/images/uncomingevents/17th oct.png',
   },
   {
     image: '/images/uncomingevents/31st oct.png',
+  },
+  {
+    image: '/images/uncomingevents/Genesis Istanbul Header.png',
   },
 ];
 

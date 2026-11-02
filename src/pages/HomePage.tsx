@@ -5,6 +5,7 @@ import LifeOfLiberty from '../components/LifeOfLiberty';
 import SundayGatherings from '../components/SundayGatherings';
 import Media from '../components/Media';
 import UpcomingEvents from '../components/UpcomingEvents';
+import LocationsMap from '../components/LocationsMap';
 
 export default function HomePage() {
     return (
@@ -16,6 +17,7 @@ export default function HomePage() {
             <SundayGatherings />
             <Media />
             <UpcomingEvents />
+            <LocationsMap />
         </>
     );
 }

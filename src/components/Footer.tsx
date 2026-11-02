@@ -39,7 +39,7 @@ export default function Footer() {
             <h4 className="font-condensed font-black text-lg uppercase tracking-wide mb-4">Follow Us</h4>
             <div className="flex gap-4">
               <a
-                href="https://www.instagram.com/libertychurchuk?igsi=Y2NsYzl1ZGpnc3R1"
+                href="https://www.instagram.com/libertychurchuk"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -48,7 +48,7 @@ export default function Footer() {
                 <Instagram className="w-5 h-5" />
               </a>
               <a
-                href="https://www.facebook.com/share/1Dc7WJi3Z9/?mibextid=wwXIfr"
+                href="https://www.facebook.com/libertychurchfamily"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"

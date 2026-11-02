@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
+import Seo from '../components/Seo';
 
 const scriptures = [
   {
@@ -52,6 +53,11 @@ const scriptures = [
 export default function VisionAndValuesPage() {
   return (
     <div className="min-h-screen bg-white">
+      <Seo
+        title="Vision & Values | Liberty Church Newport & Risca"
+        description="Our vision and values at Liberty Church: a vibrant family of hope filled believers helping to rebuild, restore and renew lives, communities and nations in Wales."
+        path="/im-new-here/vision-and-values"
+      />
       {/* Hero Section */}
       <div className="relative w-full overflow-hidden">
         <img

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
+import Seo from '../components/Seo';
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
@@ -28,6 +29,11 @@ function DigDeeper({ refs }: { refs: string[] }) {
 export default function WhoIsJesusPage() {
   return (
     <div className="min-h-screen bg-white">
+      <Seo
+        title="Who is Jesus? | Liberty Church Newport & Risca"
+        description="Discover who Jesus is, what it means to follow Him, and take your next steps in faith with Liberty Church in Newport and Risca, Wales."
+        path="/im-new-here/who-is-jesus"
+      />
       {/* Hero */}
       <div className="relative w-full">
         <img
@@ -218,49 +224,22 @@ export default function WhoIsJesusPage() {
           <Section title="Next Steps">
             <div className="space-y-4 text-gray-700 text-lg leading-relaxed">
               <p>
-                We would love to celebrate with you as you make a decision to follow Jesus. Get in touch with us below to let us know, so we can support you in your journey as a Christian.
-              </p>
-              <p>
-                Fill in your details below so we can get in contact and support you in your journey as a Christian and get you connected into the life of the church. One of our team will get in touch with you shortly!
+                We would love to celebrate with you as you make a decision to follow Jesus. Let us know using the form below so we can support you in your journey as a Christian and get you connected into the life of the church. One of our team will get in touch with you shortly!
               </p>
             </div>
 
-            {/* Contact Form */}
-            <form className="mt-6 space-y-4">
-              <h3 className="font-condensed font-bold text-xl uppercase text-gray-900">Get in Touch!</h3>
-              <div className="grid sm:grid-cols-2 gap-4">
-                <input
-                  type="text"
-                  placeholder="Your Name"
-                  className="w-full border border-gray-300 rounded-md px-4 py-3 text-gray-700 focus:outline-none focus:border-gray-900"
-                />
-                <input
-                  type="email"
-                  placeholder="Your Email"
-                  className="w-full border border-gray-300 rounded-md px-4 py-3 text-gray-700 focus:outline-none focus:border-gray-900"
-                />
-              </div>
-              <textarea
-                placeholder="Your message..."
-                rows={4}
-                className="w-full border border-gray-300 rounded-md px-4 py-3 text-gray-700 focus:outline-none focus:border-gray-900"
-              />
-              <button
-                type="submit"
-                className="bg-gray-900 text-white font-condensed font-bold uppercase tracking-widest px-8 py-3 rounded-md hover:bg-black transition-colors"
-              >
-                Send Message
-              </button>
-            </form>
+            {/* Salvation Form Link */}
+            <a
+              href="https://libertychurchwales.churchsuite.com/-/forms/7q5ofj2r"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block mt-4 bg-gray-900 text-white font-condensed font-bold uppercase tracking-widest px-8 py-3 rounded-md hover:bg-black transition-colors"
+            >
+              I've Made a Decision to Follow Jesus
+            </a>
 
             {/* Resource Links */}
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <a
-                href="#"
-                className="flex-1 text-center bg-gray-100 hover:bg-gray-200 text-gray-900 font-condensed font-bold uppercase tracking-wide px-6 py-4 rounded-md transition-colors"
-              >
-                Discipleship Guide PDF
-              </a>
               <a
                 href="https://www.bible.com"
                 target="_blank"

@@ -52,15 +52,10 @@ const cards: CardProps[] = [
     title: 'Video Content',
     link: 'https://www.youtube.com/@libertychurchuk8888',
   },
-  {
-    image: '/images/media/Liberty Website-Media Section-Additional Resources.jpg',
-    title: 'Additional Resources',
-    link: '/media/more-resources',
-  },
 ];
 
-const cloned = [...cards.slice(-3), ...cards, ...cards.slice(0, 3)];
-const OFFSET = 3;
+const cloned = [...cards.slice(-2), ...cards, ...cards.slice(0, 2)];
+const OFFSET = 2;
 
 export default function Media() {
   const [index, setIndex] = useState(OFFSET);

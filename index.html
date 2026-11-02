@@ -2,12 +2,101 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Liberty Church</title>
+
+    <!-- Primary Meta Tags -->
+    <title>Liberty Church | Newport & Risca, Wales</title>
+    <meta name="title" content="Liberty Church | Newport & Risca, Wales" />
+    <meta name="description" content="Liberty Church is a vibrant family of believers in Newport and Risca, Wales. Join us Sundays at our Gaer Hub (9am & 10:45am) and Risca (10:30am)." />
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.libertychurchuk.com/" />
+    <meta property="og:title" content="Liberty Church | Newport & Risca, Wales" />
+    <meta property="og:description" content="Liberty Church is a vibrant family of believers in Newport and Risca, Wales. Join us this Sunday at Liberty Gaer Hub or Liberty Risca." />
+    <meta property="og:image" content="https://www.libertychurchuk.com/images/Liberty Website-Hero Banner.jpg" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Liberty Church | Newport & Risca, Wales" />
+    <meta name="twitter:description" content="Liberty Church is a vibrant family of believers in Newport and Risca, Wales." />
+    <meta name="twitter:image" content="https://www.libertychurchuk.com/images/Liberty Website-Hero Banner.jpg" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Barlow:wght@300;400;500;600&family=Dancing+Script:wght@500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Local Business Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Church",
+      "name": "Liberty Church",
+      "url": "https://www.libertychurchuk.com",
+      "logo": "https://www.libertychurchuk.com/favicon.png",
+      "email": "hello@libertychurchuk.com",
+      "telephone": "+44-7943-501007",
+      "sameAs": [
+        "https://www.facebook.com/libertychurchfamily",
+        "https://www.instagram.com/libertychurchuk",
+        "https://www.youtube.com/@libertychurchuk8888"
+      ],
+      "department": [
+        {
+          "@type": "Church",
+          "name": "Liberty Gaer Hub",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Gaer Park Drive",
+            "addressLocality": "Newport",
+            "postalCode": "NP20 3NN",
+            "addressCountry": "GB"
+          },
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Sunday",
+            "opens": "09:00",
+            "closes": "12:00"
+          }
+        },
+        {
+          "@type": "Church",
+          "name": "Liberty Risca",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Risca Scouts Hall, Hafod Y Bryn",
+            "addressLocality": "Risca",
+            "postalCode": "NP11 6LL",
+            "addressCountry": "GB"
+          },
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Sunday",
+            "opens": "10:30",
+            "closes": "12:00"
+          }
+        },
+        {
+          "@type": "CafeOrCoffeeShop",
+          "name": "The Coffee House",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Gaer Park Drive",
+            "addressLocality": "Newport",
+            "postalCode": "NP20 3NN",
+            "addressCountry": "GB"
+          },
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "08:30",
+            "closes": "15:00"
+          }
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>

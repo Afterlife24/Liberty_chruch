@@ -4,10 +4,24 @@ import { useState, useEffect } from 'react';
 
 const events = [
   {
-    image: '/images/uncomingevents/31st oct.png',
+    image: '/images/uncomingevents/Coffee House Quiz Night.jpg',
+    alt: 'The Coffee House Quiz Night, 1 November, 7-9pm, Gaer Park Drive Newport',
+    link: '',
   },
   {
-    image: '/images/uncomingevents/Genesis Istanbul Header.png',
+    image: '/images/uncomingevents/Nov Youth Dates.jpg',
+    alt: 'Liberty Youth November dates, Friday nights 7-9pm at Liberty Gaer Hub',
+    link: '',
+  },
+  {
+    image: '/images/uncomingevents/31st oct.png',
+    alt: 'Liberty Church event 31st October',
+    link: '',
+  },
+  {
+    image: '/images/uncomingevents/Genesis Istanbul Header.jpg',
+    alt: 'Genesis Istanbul event - click to register',
+    link: 'https://truelifechurch.churchsuite.com/events/rdugcw5h',
   },
 ];
 
@@ -26,12 +40,18 @@ export default function UpcomingEvents() {
       <SectionTitle title="Upcoming Events" />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* Events Card */}
-        <div className="relative overflow-hidden rounded-md min-h-[280px] cursor-pointer group bg-black">
+        <div
+          className="relative overflow-hidden rounded-md min-h-[280px] cursor-pointer group bg-black"
+          onClick={() => {
+            const link = events[current].link;
+            if (link) window.open(link, '_blank', 'noopener,noreferrer');
+          }}
+        >
           {events.map((event, i) => (
             <img
               key={i}
               src={event.image}
-              alt={`Upcoming event ${i + 1}`}
+              alt={event.alt}
               className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-700 ${i === current ? 'opacity-100' : 'opacity-0'}`}
             />
           ))}
@@ -86,7 +106,7 @@ export default function UpcomingEvents() {
             </p>
             <div className="flex gap-3">
               <a
-                href="https://www.instagram.com/libertychurchuk?igsi=Y2NsYzl1ZGpnc3R1"
+                href="https://www.instagram.com/libertychurchuk"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -95,7 +115,7 @@ export default function UpcomingEvents() {
                 <Instagram className="w-5 h-5" />
               </a>
               <a
-                href="https://www.facebook.com/share/1Dc7WJi3Z9/?mibextid=wwXIfr"
+                href="https://www.facebook.com/libertychurchfamily"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"

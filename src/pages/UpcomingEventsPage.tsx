@@ -1,24 +1,16 @@
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
-
-const events = [
-  {
-    image: '/images/uncomingevents/Liberty Website-Events Section-Life Matters-23August.jpg',
-  },
-  {
-    image: '/images/uncomingevents/Liberty Website-Events Section-LK-Summer Club26.jpg',
-  },
-  {
-    image: '/images/uncomingevents/Liberty Website-Events Section-CH Quiz August26.jpg',
-  },
-  {
-    image: '/images/uncomingevents/Liberty Website-Events Section-Summer Prayer Nights.jpg',
-  },
-];
+import Seo from '../components/Seo';
 
 export default function UpcomingEventsPage() {
   return (
     <div className="min-h-screen bg-white">
+      <Seo
+        title="Calendar & Events | Liberty Church Newport & Risca"
+        description="See what's coming up at Liberty Church. View our full calendar of events across our Gaer Hub (Newport), Risca and The Coffee House."
+        path="/events"
+      />
+
       {/* Header */}
       <div className="bg-gray-900 px-6 py-8 md:px-12">
         <div className="max-w-5xl mx-auto flex items-center gap-4">
@@ -30,24 +22,23 @@ export default function UpcomingEventsPage() {
             <ArrowLeft size={24} />
           </Link>
           <h1 className="text-white font-condensed font-black text-4xl md:text-6xl uppercase leading-none">
-            Upcoming Events
+            Calendar
           </h1>
         </div>
       </div>
 
-      {/* Events Grid */}
-      <div className="max-w-5xl mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          {events.map((event, i) => (
-            <div key={i} className="rounded-lg overflow-hidden shadow-md">
-              <img
-                src={event.image}
-                alt={`Upcoming event ${i + 1}`}
-                className="w-full h-auto block"
-              />
-            </div>
-          ))}
-        </div>
+      {/* Embedded Calendar */}
+      <div className="max-w-5xl mx-auto px-4 py-8">
+        <iframe
+          frameBorder="0"
+          height="800"
+          allowTransparency={true}
+          scrolling="yes"
+          src="https://libertychurchwales.churchsuite.com/-/calendar/8d15bc1c-3db8-4f50-a798-08b5c00a625d"
+          style={{ borderWidth: 0 }}
+          width="100%"
+          title="Liberty Church Calendar"
+        />
       </div>
     </div>
   );

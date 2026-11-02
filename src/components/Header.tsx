@@ -112,10 +112,10 @@ export default function Header() {
                 </div>
               </div>
               <div className="flex gap-2 ml-2">
-                <a href="https://www.instagram.com/libertychurchuk?igsi=Y2NsYzl1ZGpnc3R1" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-gray-600 hover:text-black transition-colors">
+                <a href="https://www.instagram.com/libertychurchuk" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-gray-600 hover:text-black transition-colors">
                   <Instagram className="w-4 h-4" />
                 </a>
-                <a href="https://www.facebook.com/share/1Dc7WJi3Z9/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-gray-600 hover:text-black transition-colors">
+                <a href="https://www.facebook.com/libertychurchfamily" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-gray-600 hover:text-black transition-colors">
                   <Facebook className="w-4 h-4" />
                 </a>
                 <a href="https://www.youtube.com/@libertychurchuk8888" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="text-gray-600 hover:text-black transition-colors">

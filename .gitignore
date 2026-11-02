@@ -21,3 +21,7 @@ dist-ssr
 *.sln
 *.sw?
 .env
+
+# Private keys / secrets — never commit
+*.pem
+*.key

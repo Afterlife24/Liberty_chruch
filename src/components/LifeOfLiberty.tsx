@@ -1,6 +1,7 @@
 import SectionTitle from './SectionTitle';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useSwipe } from './useSwipe';
 
 interface CardProps {
@@ -9,6 +10,7 @@ interface CardProps {
   title: string;
   lightboxKey?: string;
   externalLink?: string;
+  pageLink?: string;
 }
 
 // ── Lightbox content ─────────────────────────────────────────────────────────
@@ -173,9 +175,12 @@ function Lightbox({ lightboxKey, image, onClose }: { lightboxKey: string; image:
 
 // ── Card component ────────────────────────────────────────────────────────────
 
-function StoryCard({ image, label, title, lightboxKey, externalLink, onLightboxOpen }: CardProps & { onLightboxOpen?: () => void }) {
+function StoryCard({ image, label, title, lightboxKey, externalLink, pageLink, onLightboxOpen }: CardProps & { onLightboxOpen?: () => void }) {
+  const navigate = useNavigate();
   const handleClick = () => {
-    if (externalLink) {
+    if (pageLink) {
+      navigate(pageLink);
+    } else if (externalLink) {
       window.open(externalLink, '_blank', 'noopener,noreferrer');
     } else if (lightboxKey && onLightboxOpen) {
       onLightboxOpen();
@@ -212,13 +217,13 @@ const cards: CardProps[] = [
     image: '/images/life of liberty/Liberty Website-Growing Disciples Section-Liberty Kids.jpg',
     label: 'Children',
     title: 'Liberty Kids',
-    lightboxKey: 'liberty-kids',
+    pageLink: '/liberty-kids',
   },
   {
     image: '/images/life of liberty/Liberty Website-Growing Disciples Section-Liberty Youth.jpg',
     label: 'Teenagers',
     title: 'Youth',
-    lightboxKey: 'youth',
+    pageLink: '/youth',
   },
   {
     image: '/images/life of liberty/Liberty Website-Growing Disciples Section-Liberty Young Adults.jpg',
@@ -242,7 +247,7 @@ const cards: CardProps[] = [
     image: '/images/life of liberty/Liberty Website-Growing Disciples Section-Liberty Coffee House.jpg',
     label: 'Community Space',
     title: 'The Coffee House',
-    lightboxKey: 'coffee-house',
+    pageLink: '/coffee-house',
   },
   {
     image: '/images/life of liberty/Liberty Website-Growing Disciples Section-Liberty Prayer&Teaching.jpg',

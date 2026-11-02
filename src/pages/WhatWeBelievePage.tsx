@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
+import Seo from '../components/Seo';
 
 const sections = [
   {
@@ -125,6 +126,11 @@ const sections = [
 export default function WhatWeBelievePage() {
   return (
     <div className="min-h-screen bg-white">
+      <Seo
+        title="What We Believe | Liberty Church Newport & Risca"
+        description="Explore the core beliefs and biblical foundations of Liberty Church in Newport and Risca, Wales — our statements of faith and how we are governed."
+        path="/im-new-here/what-we-believe"
+      />
       {/* Hero Section */}
       <div className="relative w-full">
         <img

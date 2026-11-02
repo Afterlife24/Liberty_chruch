@@ -97,104 +97,6 @@ function GlobalPictureLightbox({ onClose }: LightboxProps) {
   );
 }
 
-function PlanningYourVisitLightbox({ onClose }: LightboxProps) {
-  const handleBackdrop = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (e.target === e.currentTarget) onClose();
-  };
-
-  useEffect(() => {
-    const handler = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
-    window.addEventListener('keydown', handler);
-    return () => window.removeEventListener('keydown', handler);
-  }, [onClose]);
-
-  return (
-    <div
-      className="fixed inset-0 z-50 bg-black/70 flex items-center justify-center p-4"
-      onClick={handleBackdrop}
-    >
-      <div className="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] shadow-2xl relative flex flex-col">
-        {/* Fixed Close Button */}
-        <button
-          onClick={onClose}
-          className="absolute top-3 right-3 z-20 bg-white/90 hover:bg-white text-gray-900 p-2 rounded-full transition-colors shadow-lg"
-          aria-label="Close"
-        >
-          <X size={20} />
-        </button>
-        <div className="overflow-y-auto flex-1 rounded-lg">
-        <div className="relative w-full overflow-hidden rounded-t-lg">
-          <img
-            src="/images/I'm New Here/Liberty Website-I'm New Here-Plan Your Visit.jpg"
-            alt="Planning Your Visit"
-            className="w-full h-auto block"
-          />
-        </div>
-
-        <div className="p-6 sm:p-8 space-y-5">
-          <h3 className="font-condensed font-black text-2xl uppercase text-gray-900 tracking-wide">
-            Planning Your Visit
-          </h3>
-
-          <p className="text-gray-700 leading-relaxed">
-            We can't wait to welcome you to Liberty Church! Here's everything you need to know to make your first visit comfortable and enjoyable.
-          </p>
-
-          <div className="space-y-4">
-            <div className="bg-gray-50 p-4 rounded-lg">
-              <p className="font-semibold text-gray-900 mb-1">Newport</p>
-              <p className="text-gray-700 text-sm">Gaer Park Drive, NP20 3NN</p>
-              <p className="text-gray-700 text-sm">Sundays at 9AM &amp; 10:45AM</p>
-            </div>
-            <div className="bg-gray-50 p-4 rounded-lg">
-              <p className="font-semibold text-gray-900 mb-1">Risca</p>
-              <p className="text-gray-700 text-sm">Risca Scouts Hall, Hafod Y Bryn, Risca, NP11 6LL</p>
-              <p className="text-gray-700 text-sm">Sundays at 10:30AM</p>
-            </div>
-          </div>
-
-          <div className="border-t border-gray-100 pt-4">
-            <h4 className="font-condensed font-bold text-lg uppercase text-gray-900 mb-2">What to Expect</h4>
-            <ul className="space-y-2 text-gray-700 text-sm">
-              <li>Arrive 10-15 minutes early to meet our welcome team</li>
-              <li>Contemporary worship music followed by Bible-based teaching</li>
-              <li>Children's programmes available during the service</li>
-              <li>Come as you are — no dress code!</li>
-              <li>There is free parking at our Risca location and street parking at Liberty Gaer Hub</li>
-            </ul>
-          </div>
-
-          <div className="bg-gray-900 text-white rounded-lg p-6 text-center">
-            <h4 className="font-condensed font-black text-xl uppercase mb-2">We'd Love to See You</h4>
-            <p className="text-gray-300 text-sm mb-4">Come and experience the warmth of our Liberty Church family this Sunday.</p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <a href="tel:+447943501007" className="bg-white text-gray-900 font-condensed font-bold uppercase tracking-wide px-6 py-2.5 rounded-md hover:bg-gray-100 transition-colors text-sm">+44 7943 501 007</a>
-            </div>
-          </div>
-
-          {/* Calendar */}
-          <div className="border-t border-gray-100 pt-4">
-            <h4 className="font-condensed font-bold text-lg uppercase text-gray-900 mb-3">Upcoming Events</h4>
-            <div className="rounded-md overflow-hidden">
-              <iframe
-                frameBorder="0"
-                height="400"
-                allowTransparency={true}
-                scrolling="yes"
-                src="https://libertychurchwales.churchsuite.com/-/calendar/8d15bc1c-3db8-4f50-a798-08b5c00a625d"
-                style={{ borderWidth: 0 }}
-                width="100%"
-                title="Liberty Church Calendar"
-              />
-            </div>
-          </div>
-        </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 function ImageCard({ image, label, title, link, lightbox, lightboxKey, onLightboxOpen }: CardProps & { onLightboxOpen?: (key: string) => void }) {
   const commonClass = `relative overflow-hidden rounded-md cursor-pointer group aspect-square flex-shrink-0
     w-[85vw] 
@@ -237,8 +139,7 @@ const cards: CardProps[] = [
     image: "/images/I'm New Here/Liberty Website-I'm New Here-Plan Your Visit.jpg",
     label: 'Come & Join Us',
     title: 'Planning Your Visit',
-    lightbox: true,
-    lightboxKey: 'planning-your-visit',
+    link: '/plan-your-visit',
   },
   {
     image: "/images/I'm New Here/Liberty Website-I'm New Here-Vision&Values.jpg",
@@ -350,7 +251,6 @@ export default function NewHere() {
       </div>
 
       {lightboxOpen === 'global-picture' && <GlobalPictureLightbox onClose={() => setLightboxOpen(null)} />}
-      {lightboxOpen === 'planning-your-visit' && <PlanningYourVisitLightbox onClose={() => setLightboxOpen(null)} />}
     </section>
   );
 }

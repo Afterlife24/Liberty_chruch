@@ -4,11 +4,6 @@ import { useState, useEffect } from 'react';
 
 const events = [
   {
-    image: '/images/uncomingevents/Coffee House Quiz Night.jpg',
-    alt: 'The Coffee House Quiz Night, 1 November, 7-9pm, Gaer Park Drive Newport',
-    link: '',
-  },
-  {
     image: '/images/uncomingevents/Nov Youth Dates.jpg',
     alt: 'Liberty Youth November dates, Friday nights 7-9pm at Liberty Gaer Hub',
     link: '',

@@ -241,6 +241,12 @@ export default function WhoIsJesusPage() {
             {/* Resource Links */}
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <a
+                href="/documents/discipleship-guide.pdf"
+                className="flex-1 text-center bg-gray-100 hover:bg-gray-200 text-gray-900 font-condensed font-bold uppercase tracking-wide px-6 py-4 rounded-md transition-colors"
+              >
+                Discipleship Guide PDF
+              </a>
+              <a
                 href="https://www.bible.com"
                 target="_blank"
                 rel="noopener noreferrer"

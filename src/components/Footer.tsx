@@ -1,11 +1,18 @@
 import { Instagram, Facebook, Youtube } from 'lucide-react';
 
+const policies = [
+  { label: 'Privacy Policy', href: '/documents/privacy-policy.pdf' },
+  { label: 'Privacy Notice', href: '/documents/privacy-notice.pdf' },
+  { label: 'Retention Policy', href: '/documents/retention-policy.pdf' },
+  { label: 'Safeguarding Policy', href: '/documents/safeguarding-policy.pdf' },
+];
+
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white mt-8">
       <div className="max-w-5xl mx-auto px-4 py-12">
         {/* Top section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-8">
           {/* Contact */}
           <div>
             <h4 className="font-condensed font-black text-lg uppercase tracking-wide mb-4">Contact Us</h4>
@@ -32,6 +39,23 @@ export default function Footer() {
               <p>Risca Scouts Hall, NP11 6LL</p>
               <p className="text-gray-400">Sundays at 10:30AM</p>
             </div>
+          </div>
+
+          {/* Policies */}
+          <div>
+            <h4 className="font-condensed font-black text-lg uppercase tracking-wide mb-4">Policies</h4>
+            <ul className="space-y-2 text-gray-300 text-sm">
+              {policies.map((policy) => (
+                <li key={policy.href}>
+                  <a
+                    href={policy.href}
+                    className="hover:text-white transition-colors"
+                  >
+                    {policy.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* Social Media */}
@@ -71,11 +95,8 @@ export default function Footer() {
 
         {/* Divider */}
         <div className="border-t border-white/10 pt-6">
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-3 text-gray-400 text-xs">
+          <div className="text-gray-400 text-xs text-center sm:text-left">
             <p>&copy; {new Date().getFullYear()} Liberty Church. All rights reserved.</p>
-            <a href="#" className="hover:text-white transition-colors">
-              Policies
-            </a>
           </div>
         </div>
       </div>

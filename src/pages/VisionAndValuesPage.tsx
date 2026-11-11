@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import Seo from '../components/Seo';
+import { churchValues } from '../data/values';
 
 const scriptures = [
   {
@@ -114,11 +115,85 @@ export default function VisionAndValuesPage() {
         </section>
 
         {/* Our Values */}
-        <section>
-          <h2 className="font-condensed font-black text-3xl md:text-4xl uppercase text-gray-900 mb-4 border-b-4 border-gray-900 pb-2 inline-block">
+        <section id="our-values" className="scroll-mt-32">
+          <h2 className="font-condensed font-black text-3xl md:text-4xl uppercase text-gray-900 mb-8 border-b-4 border-gray-900 pb-2 inline-block">
             Our Values
           </h2>
-          <p className="text-gray-500 text-sm italic">PDF Booklet coming soon.</p>
+
+          <div className="space-y-8">
+            {churchValues.map((value) => (
+              <article key={value.number} className="bg-gray-50 rounded-lg p-6 md:p-8 border-l-4 border-gray-900">
+                <p className="font-condensed text-xs uppercase tracking-widest text-gray-500 mb-1">
+                  Value {value.number}
+                </p>
+                <h3 className="font-condensed font-black text-2xl md:text-3xl uppercase text-gray-900 mb-4">
+                  {value.title}
+                </h3>
+
+                <div className="space-y-4 text-gray-700 leading-relaxed">
+                  {value.summary.map((para, i) => (
+                    <p key={i}>{para}</p>
+                  ))}
+                </div>
+
+                {value.scriptures.length > 0 && (
+                  <div className="mt-5">
+                    <p className="font-condensed font-bold text-xs uppercase tracking-widest text-gray-500 mb-2">
+                      Scriptures
+                    </p>
+                    <ul className="flex flex-wrap gap-2">
+                      {value.scriptures.map((ref) => (
+                        <li
+                          key={ref}
+                          className="bg-white border border-gray-200 rounded-full px-3 py-1 text-sm text-gray-700"
+                        >
+                          {ref}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {value.more && (
+                  <details className="mt-6 group">
+                    <summary className="cursor-pointer inline-block bg-gray-900 text-white font-condensed font-bold uppercase tracking-widest text-sm px-5 py-2.5 rounded-md hover:bg-black transition-colors select-none list-none">
+                      <span className="group-open:hidden">Read the full teaching</span>
+                      <span className="hidden group-open:inline">Close teaching</span>
+                    </summary>
+                    <div className="mt-6 space-y-4 text-gray-700 leading-relaxed border-t border-gray-200 pt-6">
+                      {value.more.map((block, i) => {
+                        if (block.type === 'list') {
+                          return (
+                            <div key={i}>
+                              <p className="font-condensed font-black text-lg uppercase text-gray-900 mb-2">
+                                {block.title}
+                              </p>
+                              <ul className="space-y-1 list-none">
+                                {block.items.map((item) => (
+                                  <li key={item} className="font-semibold text-gray-900">{item}</li>
+                                ))}
+                              </ul>
+                            </div>
+                          );
+                        }
+                        if (block.type === 'heading') {
+                          return (
+                            <h4
+                              key={i}
+                              className="font-condensed font-black text-xl uppercase text-gray-900 pt-4"
+                            >
+                              {block.text}
+                            </h4>
+                          );
+                        }
+                        return <p key={i}>{block.text}</p>;
+                      })}
+                    </div>
+                  </details>
+                )}
+              </article>
+            ))}
+          </div>
         </section>
 
       </div>

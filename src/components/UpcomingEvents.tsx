@@ -4,19 +4,19 @@ import { useState, useEffect } from 'react';
 
 const events = [
   {
-    image: '/images/uncomingevents/Nov Youth Dates.jpg',
-    alt: 'Liberty Youth November dates, Friday nights 7-9pm at Liberty Gaer Hub',
+    image: '/images/uncomingevents/youth-november-2026.jpg',
+    alt: 'Liberty Youth November 2026 dates, Friday nights 7-9pm at Liberty Hub, Gaer Park Drive, Newport. Girls and Boys Night on 27 November',
     link: '',
   },
   {
-    image: '/images/uncomingevents/31st oct.png',
-    alt: 'Liberty Church event 31st October',
-    link: '',
+    image: '/images/uncomingevents/marriage-matters-nov-2026.png',
+    alt: 'Marriage Matters, 27th and 28th November 2026. Two becoming one. Click to register your place',
+    link: 'https://libertychurchwales.churchsuite.com/events/6smj3p6x',
   },
   {
-    image: '/images/uncomingevents/Genesis Istanbul Header.jpg',
-    alt: 'Genesis Istanbul event - click to register',
-    link: 'https://truelifechurch.churchsuite.com/events/rdugcw5h',
+    image: '/images/uncomingevents/christmas-market-quiz-night-dec-2026.png',
+    alt: 'Christmas Market 5-7pm and Quiz Night 7-9pm, Sunday 6th December, The Coffee House, Gaer Park Drive, Newport',
+    link: '',
   },
 ];
 

@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
+import Seo from '../components/Seo';
 
 export default function ExploringFaithPage() {
     return (
         <div className="min-h-screen bg-white">
+            <Seo path="/exploring-faith" />
             {/* Hero Section with Background Image */}
             <div className="relative h-[40vh] md:h-[50vh] overflow-hidden">
                 <img

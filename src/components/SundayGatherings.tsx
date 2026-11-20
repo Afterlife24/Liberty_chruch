@@ -129,27 +129,20 @@ function Lightbox({ lightboxKey, image, onClose }: { lightboxKey: string; image:
 
 // ── Card component ────────────────────────────────────────────────────────────
 
-function GatheringCard({ image, title, lightboxKey, onLightboxOpen }: CardProps & { onLightboxOpen?: () => void }) {
-  const handleClick = () => {
-    if (lightboxKey && onLightboxOpen) {
-      onLightboxOpen();
-    }
-  };
-
+function GatheringCard({ image, title, onLightboxOpen }: CardProps & { onLightboxOpen?: () => void }) {
   return (
-    <div
-      onClick={handleClick}
-      className="relative overflow-hidden rounded-md group aspect-video flex-shrink-0 cursor-pointer
-        w-[85vw] 
-        sm:w-[calc(50%-0.375rem)] 
-        md:w-[calc(33.333%-0.5rem)]"
+    <button
+      type="button"
+      onClick={onLightboxOpen}
+      className="relative overflow-hidden rounded-md group aspect-video flex-shrink-0 cursor-pointer text-left w-[85vw] sm:w-[calc(50%-0.375rem)] md:w-[calc(33.333%-0.5rem)]"
+      aria-label={`${title}: open details`}
     >
       <img
         src={image}
         alt={title}
         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
       />
-    </div>
+    </button>
   );
 }
 
@@ -200,7 +193,7 @@ export default function SundayGatherings() {
 
   const getCardWidth = () => {
     if (!containerRef.current) return 0;
-    const card = containerRef.current.querySelector('div[class*="aspect-video"]') as HTMLElement;
+    const card = containerRef.current.querySelector('[class*="aspect-video"]') as HTMLElement;
     if (!card) return 0;
     const gap = window.innerWidth >= 640 ? 12 : 8;
     return card.offsetWidth + gap;

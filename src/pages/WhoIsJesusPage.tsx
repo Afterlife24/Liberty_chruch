@@ -29,11 +29,7 @@ function DigDeeper({ refs }: { refs: string[] }) {
 export default function WhoIsJesusPage() {
   return (
     <div className="min-h-screen bg-white">
-      <Seo
-        title="Who is Jesus? | Liberty Church Newport & Risca"
-        description="Discover who Jesus is, what it means to follow Him, and take your next steps in faith with Liberty Church in Newport and Risca, Wales."
-        path="/im-new-here/who-is-jesus"
-      />
+      <Seo path="/im-new-here/who-is-jesus" />
       {/* Hero */}
       <div className="relative w-full">
         <img

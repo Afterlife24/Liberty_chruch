@@ -5,11 +5,7 @@ import Seo from '../components/Seo';
 export default function CoffeeHousePage() {
   return (
     <div className="min-h-screen bg-white">
-      <Seo
-        title="The Coffee House | Liberty Church Newport"
-        description="The Coffee House at Liberty Church, Gaer Park Drive, Newport. A welcoming community space open Tuesday to Friday, 8:30am - 3:00pm."
-        path="/coffee-house"
-      />
+      <Seo path="/coffee-house" />
 
       <div className="relative w-full">
         <img

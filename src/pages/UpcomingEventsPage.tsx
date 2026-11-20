@@ -5,11 +5,7 @@ import Seo from '../components/Seo';
 export default function UpcomingEventsPage() {
   return (
     <div className="min-h-screen bg-white">
-      <Seo
-        title="Calendar & Events | Liberty Church Newport & Risca"
-        description="See what's coming up at Liberty Church. View our full calendar of events across our Gaer Hub (Newport), Risca and The Coffee House."
-        path="/events"
-      />
+      <Seo path="/events" />
 
       {/* Header */}
       <div className="bg-gray-900 px-6 py-8 md:px-12">

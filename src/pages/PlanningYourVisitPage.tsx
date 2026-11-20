@@ -5,11 +5,7 @@ import Seo from '../components/Seo';
 export default function PlanningYourVisitPage() {
   return (
     <div className="min-h-screen bg-white">
-      <Seo
-        title="Plan Your Visit | Liberty Church Newport & Risca"
-        description="Planning your first visit to Liberty Church? Join us Sundays at Liberty Gaer Hub, Newport (9am & 10:45am) or Liberty Risca (10:30am). Here's what to expect."
-        path="/plan-your-visit"
-      />
+      <Seo path="/plan-your-visit" />
 
       {/* Hero */}
       <div className="relative w-full">

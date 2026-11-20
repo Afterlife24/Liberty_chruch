@@ -1,0 +1,69 @@
+[
+  {
+    "path": "/",
+    "title": "Liberty Church | Newport & Risca, Wales",
+    "description": "Liberty Church is a vibrant family of believers in Newport and Risca, Wales. Join us on Sundays at Liberty Gaer Hub (9am & 10:45am) and Liberty Risca (10:30am).",
+    "priority": 1.0
+  },
+  {
+    "path": "/im-new-here/who-is-jesus",
+    "title": "Who is Jesus? | Liberty Church Newport & Risca",
+    "description": "Discover who Jesus is, what it means to follow Him, and take your next steps in faith with Liberty Church in Newport and Risca, Wales.",
+    "priority": 0.8
+  },
+  {
+    "path": "/im-new-here/vision-and-values",
+    "title": "Vision & Values | Liberty Church Newport & Risca",
+    "description": "Our vision and ten core values at Liberty Church: a vibrant family of hope filled believers helping to rebuild, restore and renew lives, communities and nations in Wales.",
+    "priority": 0.8
+  },
+  {
+    "path": "/im-new-here/what-we-believe",
+    "title": "What We Believe | Liberty Church Newport & Risca",
+    "description": "Explore the core beliefs and biblical foundations of Liberty Church in Newport and Risca, Wales, including our statements of faith and how we are governed.",
+    "priority": 0.8
+  },
+  {
+    "path": "/plan-your-visit",
+    "title": "Plan Your Visit | Liberty Church Newport & Risca",
+    "description": "Planning your first visit to Liberty Church? Join us on Sundays at Liberty Gaer Hub, Newport (9am & 10:45am) or Liberty Risca (10:30am). Here is what to expect.",
+    "priority": 0.8
+  },
+  {
+    "path": "/coffee-house",
+    "title": "The Coffee House | Liberty Church Newport",
+    "description": "The Coffee House at Liberty Church, Gaer Park Drive, Newport. A welcoming community space open Tuesday to Friday, 8:30am to 3:00pm.",
+    "priority": 0.8
+  },
+  {
+    "path": "/liberty-kids",
+    "title": "Liberty Kids | Liberty Church Newport & Risca",
+    "description": "Liberty Kids runs during our Sunday morning services for children from Nursery to Year 6. Fun, safe and engaging programmes at Liberty Church, Newport.",
+    "priority": 0.8
+  },
+  {
+    "path": "/youth",
+    "title": "Liberty Youth | Liberty Church Newport",
+    "description": "Liberty Youth meets every Friday during term-time from 7-9pm at our Gaer Hub in Newport. A great night of fun, community and discipleship for young people.",
+    "priority": 0.8
+  },
+  {
+    "path": "/events",
+    "title": "Calendar & Events | Liberty Church Newport & Risca",
+    "description": "See what is coming up at Liberty Church. View our full calendar of events at Liberty Gaer Hub (Newport), Liberty Risca and The Coffee House.",
+    "priority": 0.7
+  },
+  {
+    "path": "/libertygroups",
+    "title": "Liberty Groups Sign Up | Liberty Church Newport & Risca",
+    "description": "Sign up to a Liberty Group: places to belong, grow, connect and find freedom in God. Join a small group with Liberty Church in Newport and Risca.",
+    "priority": 0.7
+  },
+  {
+    "path": "/exploring-faith",
+    "title": "Exploring Faith | Liberty Church",
+    "description": "Explore faith with Liberty Church in Newport and Risca, Wales.",
+    "sitemap": false,
+    "noindex": true
+  }
+]

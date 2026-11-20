@@ -3,12 +3,12 @@ import { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 const navLinks = [
-  { text: "home", anchor: "", isCalendar: false },
-  { text: "i'm new here", anchor: "im-new-here", isCalendar: false },
-  { text: "life of liberty", anchor: "life-of-liberty", isCalendar: false },
-  { text: "sunday gatherings", anchor: "sunday-gatherings", isCalendar: false },
-  { text: "media", anchor: "media", isCalendar: false },
-  { text: "calendar", anchor: "", isCalendar: true },
+  { text: "home", href: "/", anchor: "", isCalendar: false },
+  { text: "i'm new here", href: "/#im-new-here", anchor: "im-new-here", isCalendar: false },
+  { text: "life of liberty", href: "/#life-of-liberty", anchor: "life-of-liberty", isCalendar: false },
+  { text: "sunday gatherings", href: "/#sunday-gatherings", anchor: "sunday-gatherings", isCalendar: false },
+  { text: "media", href: "/#media", anchor: "media", isCalendar: false },
+  { text: "calendar", href: "/events", anchor: "", isCalendar: true },
 ];
 
 function CalendarLightbox({ onClose }: { onClose: () => void }) {
@@ -61,7 +61,9 @@ export default function Header() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const handleNavClick = (anchor: string, isCalendar: boolean) => {
+  const handleNavClick = (e: React.MouseEvent, anchor: string, isCalendar: boolean) => {
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+    e.preventDefault();
     setMobileOpen(false);
     if (isCalendar) {
       setCalendarOpen(true);
@@ -108,7 +110,7 @@ export default function Header() {
                     Join Us This Sunday At Liberty
                   </p>
                   <p>Gaer Park Drive, NP20 3NN &nbsp;|&nbsp; 9AM &amp; 10:45AM</p>
-                  <p>Risca Scouts Hall, NP11 6LL &nbsp;|&nbsp; 10:30AM</p>
+                  <p>Risca Scouts Hall, Hafod Y Bryn, Risca, NP11 6LL &nbsp;|&nbsp; 10:30AM</p>
                 </div>
               </div>
               <div className="flex gap-2 ml-2">
@@ -143,12 +145,13 @@ export default function Header() {
             {navLinks.map((link, i) => (
               <span key={link.text}>
                 {i > 0 && <span className="text-gray-300 mx-2">|</span>}
-                <button
-                  onClick={() => handleNavClick(link.anchor, link.isCalendar)}
+                <a
+                  href={link.href}
+                  onClick={(e) => handleNavClick(e, link.anchor, link.isCalendar)}
                   className="text-gray-800 hover:text-black text-sm font-medium transition-colors capitalize"
                 >
                   {link.text}
-                </button>
+                </a>
               </span>
             ))}
           </nav>
@@ -157,13 +160,14 @@ export default function Header() {
           {mobileOpen && (
             <nav className="sm:hidden border-t border-gray-200 py-3 flex flex-col gap-3">
               {navLinks.map((link) => (
-                <button
+                <a
                   key={link.text}
-                  onClick={() => handleNavClick(link.anchor, link.isCalendar)}
+                  href={link.href}
+                  onClick={(e) => handleNavClick(e, link.anchor, link.isCalendar)}
                   className="text-gray-800 hover:text-black text-sm font-medium capitalize px-2 text-left"
                 >
                   {link.text}
-                </button>
+                </a>
               ))}
             </nav>
           )}

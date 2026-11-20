@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
+import Seo from '../components/Seo';
 
 export default function LibertyGroupsSignUpPage() {
   return (
     <div className="min-h-screen bg-white">
+      <Seo path="/libertygroups" />
       {/* Header */}
       <div className="bg-gray-900 px-6 py-8 md:px-12">
         <div className="max-w-5xl mx-auto flex items-center gap-4">

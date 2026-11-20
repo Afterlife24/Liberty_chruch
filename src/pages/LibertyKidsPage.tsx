@@ -5,11 +5,7 @@ import Seo from '../components/Seo';
 export default function LibertyKidsPage() {
   return (
     <div className="min-h-screen bg-white">
-      <Seo
-        title="Liberty Kids | Liberty Church Newport & Risca"
-        description="Liberty Kids runs during our Sunday morning services for children from Nursery to Year 6. Fun, safe and engaging programmes at Liberty Church, Newport."
-        path="/liberty-kids"
-      />
+      <Seo path="/liberty-kids" />
 
       <div className="relative w-full">
         <img

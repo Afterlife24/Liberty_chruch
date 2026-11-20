@@ -97,32 +97,35 @@ function GlobalPictureLightbox({ onClose }: LightboxProps) {
   );
 }
 
-function ImageCard({ image, label, title, link, lightbox, lightboxKey, onLightboxOpen }: CardProps & { onLightboxOpen?: (key: string) => void }) {
+function ImageCard({ image, title, link, lightbox, lightboxKey, onLightboxOpen }: CardProps & { onLightboxOpen?: (key: string) => void }) {
   const commonClass = `relative overflow-hidden rounded-md cursor-pointer group aspect-square flex-shrink-0
     w-[85vw] 
     sm:w-[calc(50%-0.375rem)] 
     md:w-[calc(33.333%-0.5rem)]`;
 
   const inner = (
-    <>
       <img
         src={image}
         alt={title}
         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
       />
-    </>
   );
 
   if (lightbox) {
     return (
-      <div className={commonClass} onClick={() => onLightboxOpen?.(lightboxKey || '')}>
+      <button
+        type="button"
+        className={`${commonClass} text-left`}
+        onClick={() => onLightboxOpen?.(lightboxKey || '')}
+        aria-label={`${title}: open details`}
+      >
         {inner}
-      </div>
+      </button>
     );
   }
 
   return (
-    <Link to={link!} className={commonClass}>
+    <Link to={link!} className={commonClass} aria-label={title}>
       {inner}
     </Link>
   );
@@ -178,7 +181,7 @@ export default function NewHere() {
 
   const getCardWidth = () => {
     if (!containerRef.current) return 0;
-    const card = containerRef.current.querySelector('a, div[class*="aspect-square"]') as HTMLElement;
+    const card = containerRef.current.querySelector('[class*="aspect-square"]') as HTMLElement;
     if (!card) return 0;
     const gap = window.innerWidth >= 640 ? 12 : 8;
     return card.offsetWidth + gap;

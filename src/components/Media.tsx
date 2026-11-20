@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import SectionTitle from './SectionTitle';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
@@ -11,34 +11,31 @@ interface CardProps {
 }
 
 function MediaCard({ image, title, link }: CardProps) {
-  const navigate = useNavigate();
-
-  const handleClick = () => {
-    if (link) {
-      if (link.startsWith('http')) {
-        window.open(link, '_blank', 'noopener,noreferrer');
-      } else {
-        navigate(link);
-      }
-    }
-  };
-
-  return (
-    <div
-      onClick={handleClick}
-      className={`relative overflow-hidden rounded-md group aspect-video flex-shrink-0
-        w-[85vw] 
-        sm:w-[calc(50%-0.375rem)] 
-        md:w-[calc(33.333%-0.5rem)] 
-        ${link ? 'cursor-pointer' : 'cursor-default'}`}
-    >
+  const cardClass =
+    'relative overflow-hidden rounded-md group aspect-video flex-shrink-0 w-[85vw] sm:w-[calc(50%-0.375rem)] md:w-[calc(33.333%-0.5rem)] cursor-pointer';
+  const img = (
       <img
         src={image}
         alt={title}
         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
       />
-    </div>
   );
+
+  if (link?.startsWith('http')) {
+    return (
+      <a href={link} target="_blank" rel="noopener noreferrer" className={cardClass} aria-label={`${title} (opens in a new tab)`}>
+        {img}
+      </a>
+    );
+  }
+  if (link) {
+    return (
+      <Link to={link} className={cardClass} aria-label={title}>
+        {img}
+      </Link>
+    );
+  }
+  return <div className={cardClass}>{img}</div>;
 }
 
 const cards: CardProps[] = [
@@ -69,7 +66,7 @@ export default function Media() {
 
   const getCardWidth = () => {
     if (!containerRef.current) return 0;
-    const card = containerRef.current.querySelector('div[class*="aspect-video"]') as HTMLElement;
+    const card = containerRef.current.querySelector('[class*="aspect-video"]') as HTMLElement;
     if (!card) return 0;
     const gap = window.innerWidth >= 640 ? 12 : 8;
     return card.offsetWidth + gap;

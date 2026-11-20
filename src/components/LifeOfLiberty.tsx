@@ -1,7 +1,7 @@
 import SectionTitle from './SectionTitle';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useSwipe } from './useSwipe';
 
 interface CardProps {
@@ -175,32 +175,41 @@ function Lightbox({ lightboxKey, image, onClose }: { lightboxKey: string; image:
 
 // ── Card component ────────────────────────────────────────────────────────────
 
-function StoryCard({ image, label, title, lightboxKey, externalLink, pageLink, onLightboxOpen }: CardProps & { onLightboxOpen?: () => void }) {
-  const navigate = useNavigate();
-  const handleClick = () => {
-    if (pageLink) {
-      navigate(pageLink);
-    } else if (externalLink) {
-      window.open(externalLink, '_blank', 'noopener,noreferrer');
-    } else if (lightboxKey && onLightboxOpen) {
-      onLightboxOpen();
-    }
-  };
-
-  return (
-    <div
-      onClick={handleClick}
-      className="relative overflow-hidden rounded-md group aspect-video flex-shrink-0 cursor-pointer
-        w-[85vw] 
-        sm:w-[calc(50%-0.375rem)] 
-        md:w-[calc(33.333%-0.5rem)]"
-    >
+function StoryCard({ image, title, lightboxKey, externalLink, pageLink, onLightboxOpen }: CardProps & { onLightboxOpen?: () => void }) {
+  const cardClass =
+    'relative overflow-hidden rounded-md group aspect-video flex-shrink-0 cursor-pointer w-[85vw] sm:w-[calc(50%-0.375rem)] md:w-[calc(33.333%-0.5rem)]';
+  const img = (
       <img
         src={image}
         alt={title}
         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
       />
-    </div>
+  );
+
+  // Cards that go to a page or another site are real links, so search engines can follow them.
+  if (pageLink) {
+    return (
+      <Link to={pageLink} className={cardClass} aria-label={title}>
+        {img}
+      </Link>
+    );
+  }
+  if (externalLink) {
+    return (
+      <a href={externalLink} target="_blank" rel="noopener noreferrer" className={cardClass} aria-label={`${title} (opens in a new tab)`}>
+        {img}
+      </a>
+    );
+  }
+  return (
+    <button
+      type="button"
+      onClick={lightboxKey ? onLightboxOpen : undefined}
+      className={`${cardClass} text-left`}
+      aria-label={`${title}: open details`}
+    >
+      {img}
+    </button>
   );
 }
 
@@ -281,7 +290,7 @@ export default function LifeOfLiberty() {
 
   const getCardWidth = () => {
     if (!containerRef.current) return 0;
-    const card = containerRef.current.querySelector('div[class*="aspect-video"]') as HTMLElement;
+    const card = containerRef.current.querySelector('[class*="aspect-video"]') as HTMLElement;
     if (!card) return 0;
     const gap = window.innerWidth >= 640 ? 12 : 8;
     return card.offsetWidth + gap;

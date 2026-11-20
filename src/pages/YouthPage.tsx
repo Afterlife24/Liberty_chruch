@@ -5,11 +5,7 @@ import Seo from '../components/Seo';
 export default function YouthPage() {
   return (
     <div className="min-h-screen bg-white">
-      <Seo
-        title="Liberty Youth | Liberty Church Newport"
-        description="Liberty Youth meets every Friday during term-time from 7-9pm at our Gaer Hub in Newport. A great night of fun, community and discipleship for young people."
-        path="/youth"
-      />
+      <Seo path="/youth" />
 
       <div className="relative w-full">
         <img

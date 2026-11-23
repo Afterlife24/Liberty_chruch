@@ -1,8 +1,23 @@
 import { Instagram, Facebook, Youtube } from 'lucide-react';
 import SectionTitle from './SectionTitle';
 import { useState, useEffect } from 'react';
+import ChristmasLightbox from './ChristmasLightbox';
 
-const events = [
+interface EventSlide {
+  image: string;
+  alt: string;
+  link: string;
+  /** Opens an on-page pop-up instead of an external link. */
+  popup?: 'christmas';
+}
+
+const events: EventSlide[] = [
+  {
+    image: '/images/christmas/christmas-at-liberty-tile.jpg',
+    alt: 'Christmas at Liberty. Click to see everything happening over Christmas.',
+    link: '',
+    popup: 'christmas',
+  },
   {
     image: '/images/uncomingevents/youth-november-2026.jpg',
     alt: 'Liberty Youth November 2026 dates, Friday nights 7-9pm at Liberty Hub, Gaer Park Drive, Newport. Girls and Boys Night on 27 November',
@@ -22,6 +37,7 @@ const events = [
 
 export default function UpcomingEvents() {
   const [current, setCurrent] = useState(0);
+  const [christmasOpen, setChristmasOpen] = useState(false);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -38,8 +54,9 @@ export default function UpcomingEvents() {
         <div
           className="relative overflow-hidden rounded-md min-h-[280px] cursor-pointer group bg-black"
           onClick={() => {
-            const link = events[current].link;
-            if (link) window.open(link, '_blank', 'noopener,noreferrer');
+            const slide = events[current];
+            if (slide.popup === 'christmas') setChristmasOpen(true);
+            else if (slide.link) window.open(slide.link, '_blank', 'noopener,noreferrer');
           }}
         >
           {events.map((event, i) => (
@@ -57,7 +74,10 @@ export default function UpcomingEvents() {
             {events.map((_, i) => (
               <button
                 key={i}
-                onClick={() => setCurrent(i)}
+                onClick={(e) => {
+                  e.stopPropagation(); // dots sit inside the clickable slide; don't trigger its link/pop-up
+                  setCurrent(i);
+                }}
                 className={`w-2 h-2 rounded-full transition-colors ${i === current ? 'bg-white' : 'bg-white/50'}`}
                 aria-label={`Event ${i + 1}`}
               />
@@ -131,6 +151,8 @@ export default function UpcomingEvents() {
           </div>
         </div>
       </div>
+
+      {christmasOpen && <ChristmasLightbox onClose={() => setChristmasOpen(false)} />}
     </section>
   );
 }

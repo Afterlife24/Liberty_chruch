@@ -3,6 +3,7 @@ import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useSwipe } from './useSwipe';
+import ChristmasLightbox from './ChristmasLightbox';
 
 interface CardProps {
   image: string;
@@ -217,6 +218,12 @@ function StoryCard({ image, title, lightboxKey, externalLink, pageLink, onLightb
 
 const cards: CardProps[] = [
   {
+    image: '/images/christmas/christmas-at-liberty-tile.jpg',
+    label: 'Christmas',
+    title: 'Christmas at Liberty',
+    lightboxKey: 'christmas',
+  },
+  {
     image: '/images/life of liberty/Liberty Website-Growing Disciples Section-Liberty Groups.jpg',
     label: 'Community',
     title: 'Liberty Groups',
@@ -364,7 +371,9 @@ export default function LifeOfLiberty() {
         </div>
       </div>
 
-      {activeLightbox && (
+      {activeLightbox?.key === 'christmas' && <ChristmasLightbox onClose={() => setActiveLightbox(null)} />}
+
+      {activeLightbox && activeLightbox.key !== 'christmas' && (
         <Lightbox
           lightboxKey={activeLightbox.key}
           image={activeLightbox.image}

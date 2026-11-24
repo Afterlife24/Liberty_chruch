@@ -33,6 +33,31 @@ const events: EventSlide[] = [
     alt: 'Christmas Market 5-7pm and Quiz Night 7-9pm, Sunday 6th December, The Coffee House, Gaer Park Drive, Newport',
     link: '',
   },
+  // The slides below open the Christmas at Liberty pop-up, which has the full details.
+  {
+    image: '/images/christmas/carols-gaer-20-dec.jpg',
+    alt: 'Carols at Liberty, 20th December, 9am and 10:45am, Liberty Hub, Gaer Park Drive, Newport. Click for all Christmas events.',
+    link: '',
+    popup: 'christmas',
+  },
+  {
+    image: '/images/christmas/carols-risca-20-dec.jpg',
+    alt: 'Carols at Liberty, 20th December, 10:30am, Bethany Baptist Church, Risca. Click for all Christmas events.',
+    link: '',
+    popup: 'christmas',
+  },
+  {
+    image: '/images/christmas/christmas-eve-o-holy-night-24-dec.jpg',
+    alt: 'O Holy Night, Christmas Eve service, 24th December, 5pm, at the Gaer Hub. Click for all Christmas events.',
+    link: '',
+    popup: 'christmas',
+  },
+  {
+    image: '/images/christmas/new-years-day-worship-night-1-jan.jpg',
+    alt: 'Worship night, New Years Day, from 7:30pm, Liberty Hub, Gaer. Click for all Christmas events.',
+    link: '',
+    popup: 'christmas',
+  },
 ];
 
 export default function UpcomingEvents() {

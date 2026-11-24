@@ -54,9 +54,17 @@ jobs:
             --cache-control "max-age=3600,public" \
             --content-type "application/pdf" \
             --metadata-directive REPLACE
-          aws s3 cp $BUCKET/images/ $BUCKET/images/ --recursive \
-            --cache-control "max-age=3600,public" \
-            --metadata-directive REPLACE
+          # Images: set a 1 hour cache AND keep the correct file type per extension.
+          # (Replacing metadata without a content-type turns every image into binary/octet-stream.)
+          for pair in "jpg:image/jpeg" "jpeg:image/jpeg" "png:image/png" "gif:image/gif" "webp:image/webp" "svg:image/svg+xml"; do
+            ext="${pair%%:*}"
+            type="${pair#*:}"
+            aws s3 cp $BUCKET/images/ $BUCKET/images/ --recursive \
+              --exclude "*" --include "*.$ext" \
+              --cache-control "max-age=3600,public" \
+              --content-type "$type" \
+              --metadata-directive REPLACE
+          done
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}

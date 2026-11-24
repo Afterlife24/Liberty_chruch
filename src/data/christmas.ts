@@ -1,5 +1,9 @@
-// Content for the "Christmas at Liberty" pop-up, supplied by Lois (22 Nov 2026).
+// Content for the "Christmas at Liberty" pop-up, supplied by Lois (22-24 Nov 2026).
 // To change wording, add an event, or add a graphic, edit this file only.
+//
+// Each event has one or more "groups". A group is one block of text (and optionally buttons and a
+// graphic). When an event has more than one group, a divider line is drawn between them. Use
+// groups to keep a graphic next to the venue it belongs to, e.g. Gaer and Risca on the same day.
 
 export interface ChristmasLink {
   label: string;
@@ -11,11 +15,15 @@ export interface ChristmasImage {
   alt: string;
 }
 
-export interface ChristmasEvent {
-  date: string;
+export interface ChristmasGroup {
   lines: string[];
   links?: ChristmasLink[];
   image?: ChristmasImage;
+}
+
+export interface ChristmasEvent {
+  date: string;
+  groups: ChristmasGroup[];
 }
 
 export const christmasTile: ChristmasImage = {
@@ -29,64 +37,100 @@ export const christmasIntro =
 export const christmasEvents: ChristmasEvent[] = [
   {
     date: 'Sunday 6th December',
-    lines: ['Christmas Market 5-7pm', 'The Coffee House Quiz Night 7-9pm', 'Both at Liberty Gaer Hub'],
-    links: [
+    groups: [
       {
-        label: 'Register to run a stall',
-        href: 'https://libertychurchwales.churchsuite.com/-/forms/4r6ukapm',
+        lines: ['Christmas Market 5-7pm', 'The Coffee House Quiz Night 7-9pm', 'Both at Liberty Gaer Hub'],
+        links: [
+          {
+            label: 'Register to run a stall',
+            href: 'https://libertychurchwales.churchsuite.com/-/forms/4r6ukapm',
+          },
+        ],
+        image: {
+          src: '/images/christmas/christmas-market-quiz-night-6-dec.png',
+          alt: 'Christmas Market 5 to 7pm and Quiz Night 7 to 9pm, Sunday 6th December, The Coffee House, Gaer Park Drive, Newport',
+        },
       },
     ],
-    image: {
-      src: '/images/christmas/christmas-market-quiz-night-6-dec.png',
-      alt: 'Christmas Market 5 to 7pm and Quiz Night 7 to 9pm, Sunday 6th December, The Coffee House, Gaer Park Drive, Newport',
-    },
   },
   {
     date: 'Friday 11th December',
-    lines: ['Youth Christmas Party 6.30-9.30pm at Liberty Gaer Hub'],
+    groups: [{ lines: ['Youth Christmas Party 6.30-9.30pm at Liberty Gaer Hub'] }],
   },
   {
     date: 'Sunday 13th December',
-    lines: [
-      'Liberty Gaer Sunday Services - 9am and 10.45am (Kids Christmas Party in both services)',
-      'Liberty Risca Family Service and lunch together 10.30am.',
-      'Please let us know what food you can bring.',
-    ],
-    links: [
+    groups: [
+      // Gaer first, then a divider, then Risca with its sign-up button and graphic,
+      // so the food sign-up and the graphic clearly belong to Risca only.
       {
-        label: 'Food sign-up',
-        href: 'https://libertychurchwales.churchsuite.com/-/forms/l6yxasmf',
+        lines: ['Liberty Gaer Sunday Services - 9am and 10.45am (Kids Christmas Party in both services)'],
+      },
+      {
+        lines: ['Liberty Risca Family Service and lunch together 10.30am.', 'Please let us know what food you can bring.'],
+        links: [
+          {
+            label: 'Food sign-up',
+            href: 'https://libertychurchwales.churchsuite.com/-/forms/l6yxasmf',
+          },
+        ],
+        image: {
+          src: '/images/christmas/risca-christmas-family-service-13-dec.jpg',
+          alt: 'Christmas family service, Sunday 13th December, 10:30am, followed by lunch together. Risca Scouts Hall, NP11 6LL',
+        },
       },
     ],
-    image: {
-      src: '/images/christmas/risca-christmas-family-service-13-dec.jpg',
-      alt: 'Christmas family service, Sunday 13th December, 10:30am, followed by lunch together. Risca Scouts Hall, NP11 6LL',
-    },
   },
   {
     date: 'Sunday 20th December',
-    lines: [
-      'Liberty Gaer Carol Services - 9am and 10.45am',
-      'Liberty Risca Carol Service at Bethany Baptist Church 10.30am.',
+    groups: [
+      {
+        lines: ['Liberty Gaer Carol Services - 9am and 10.45am'],
+        image: {
+          src: '/images/christmas/carols-gaer-20-dec.jpg',
+          alt: 'Carols at Liberty, 20th December, 9am and 10:45am, Liberty Hub, Gaer Park Drive, Newport, NP20 3NN',
+        },
+      },
+      {
+        lines: ['Liberty Risca Carol Service at Bethany Baptist Church 10.30am.'],
+        image: {
+          src: '/images/christmas/carols-risca-20-dec.jpg',
+          alt: 'Carols at Liberty, 20th December, 10:30am, Bethany Baptist Church, Risca',
+        },
+      },
     ],
   },
   {
     date: 'Thursday 24th December',
-    lines: ['Christmas Eve Service at 5pm, at Liberty Gaer Hub'],
+    groups: [
+      {
+        lines: ['Christmas Eve Service at 5pm, at Liberty Gaer Hub'],
+        image: {
+          src: '/images/christmas/christmas-eve-o-holy-night-24-dec.jpg',
+          alt: 'O Holy Night, Christmas Eve service, 24th December, 5pm, at the Gaer Hub',
+        },
+      },
+    ],
   },
   {
     date: 'Sunday 27th December',
-    lines: ['Liberty Gaer Sunday Services at 9am and 10.45am', 'Liberty Risca Sunday Service at 10.30am.'],
+    groups: [{ lines: ['Liberty Gaer Sunday Services at 9am and 10.45am', 'Liberty Risca Sunday Service at 10.30am.'] }],
   },
   {
     date: 'Friday 1st January',
-    lines: ['New Years Day worship night at the Gaer at 7.30pm'],
+    groups: [
+      {
+        lines: ['New Years Day worship night at the Gaer at 7.30pm'],
+        image: {
+          src: '/images/christmas/new-years-day-worship-night-1-jan.jpg',
+          alt: 'Worship night, New Years Day, from 7:30pm, Liberty Hub, Gaer',
+        },
+      },
+    ],
   },
   {
-    // The supplied text said "Sunday 3rd December". 3 December 2026 is a Thursday and the list
-    // is already past 1 January, so this is Sunday 3 January 2027. Waiting on Lois to confirm.
+    // Lois confirmed 3 January (her original text said "3rd December" in error).
     date: 'Sunday 3rd January',
-    lines: ['Liberty Gaer Sunday Service at 10.30am', 'Liberty Risca Sunday Service at 10.30am.'],
+    groups: [{ lines: ['Liberty Gaer Sunday Service at 10.30am', 'Liberty Risca Sunday Service at 10.30am.'] }],
   },
 ];
 

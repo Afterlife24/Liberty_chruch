@@ -15,35 +15,42 @@ const BUTTON =
 function EventBlock({ event }: { event: ChristmasEvent }) {
   return (
     <article className="border-l-4 border-[#9b1c20] pl-4 sm:pl-5">
-      <div className={event.image ? 'md:grid md:grid-cols-[1fr_320px] md:gap-6 md:items-start' : ''}>
-        <div>
-          <h3 className={`font-condensed font-black text-2xl uppercase leading-tight ${ACCENT}`}>
-            {event.date}
-          </h3>
-          <ul className="mt-2 space-y-1 text-gray-700 leading-relaxed">
-            {event.lines.map((line) => (
-              <li key={line}>{line}</li>
-            ))}
-          </ul>
-          {event.links && (
-            <div className="mt-3 flex flex-wrap gap-3">
-              {event.links.map((link) => (
-                <a key={link.href} href={link.href} target="_blank" rel="noopener noreferrer" className={BUTTON}>
-                  {link.label}
-                </a>
-              ))}
+      <h3 className={`font-condensed font-black text-2xl uppercase leading-tight ${ACCENT}`}>{event.date}</h3>
+
+      {event.groups.map((group, i) => (
+        <div
+          key={i}
+          // A divider line between groups keeps each venue's text, sign-up and graphic together.
+          className={i === 0 ? 'mt-2' : 'mt-5 pt-5 border-t border-gray-300'}
+        >
+          <div className={group.image ? 'md:grid md:grid-cols-[1fr_320px] md:gap-6 md:items-start' : ''}>
+            <div>
+              <ul className="space-y-1 text-gray-700 leading-relaxed">
+                {group.lines.map((line) => (
+                  <li key={line}>{line}</li>
+                ))}
+              </ul>
+              {group.links && (
+                <div className="mt-3 flex flex-wrap gap-3">
+                  {group.links.map((link) => (
+                    <a key={link.href} href={link.href} target="_blank" rel="noopener noreferrer" className={BUTTON}>
+                      {link.label}
+                    </a>
+                  ))}
+                </div>
+              )}
             </div>
-          )}
+            {group.image && (
+              <img
+                src={group.image.src}
+                alt={group.image.alt}
+                loading="lazy"
+                className="mt-4 md:mt-0 w-full h-auto rounded-md shadow-sm"
+              />
+            )}
+          </div>
         </div>
-        {event.image && (
-          <img
-            src={event.image.src}
-            alt={event.image.alt}
-            loading="lazy"
-            className="mt-4 md:mt-0 w-full h-auto rounded-md shadow-sm"
-          />
-        )}
-      </div>
+      ))}
     </article>
   );
 }
